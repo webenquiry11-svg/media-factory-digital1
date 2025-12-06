@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { BarChart3, ChevronDown, MoreHorizontal } from 'lucide-react';
 
