@@ -1,4 +1,4 @@
-
+'use client'; // <--- ADD THIS LINE HERE
 import React from 'react';
 
 // --- SVGs for the Brand Logos (Unchanged) ---
