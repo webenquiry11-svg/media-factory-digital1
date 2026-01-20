@@ -110,11 +110,11 @@ const WorkingRoadmap = () => {
             </span>
             
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Working Roadmap
+              Your Path to Digital Success
             </h2>
             
             <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-              In today's competitive business, the demand for efficient and cost-effective IT solutions has never been more critical.
+              In today's digital-first landscape, businesses need more than effective solutions—they need a defined strategy for growth.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">

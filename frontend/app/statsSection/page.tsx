@@ -20,39 +20,41 @@ const Page = () => {
 
           {/* Heading */}
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.15]">
-            The Complete <span className="font-light text-gray-500">Platform To</span> <br />
-            Power <br />
-            Your Operations
+            Ultimate Hub To Fuel <br />
+            Your Digital Success
           </h1>
 
           {/* Subtext */}
           <p className="text-gray-500 text-lg max-w-md leading-relaxed">
-            In today's competitive business, the demand for efficient and cost-effective IT solutions has never been more critical.
+            In today's fast-paced market, businesses demand agile, high-impact digital tools that drive growth like never before.
           </p>
 
           {/* Interactive List / Tabs */}
           <div className="space-y-4 pt-4">
             {/* Item 1 */}
             <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              Tailored solution
+              <h4 className="font-bold text-gray-900 mb-1">Custom Strategies</h4>
+              <p className="text-sm text-gray-500">Bespoke plans crafted to align perfectly with your brand's vision and growth targets.</p>
             </div>
 
             {/* Item 2 (Active State) */}
             <div className="bg-white rounded-xl shadow-xl shadow-gray-200/50 p-6 border-l-4 border-blue-600 transform scale-105 transition-transform">
-              <h3 className="text-blue-900 font-bold text-lg mb-2">Cutting-edge technology</h3>
+              <h3 className="text-blue-900 font-bold text-lg mb-2">Advanced Technology</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                We customize our technology to fit your specific need ensuring the best possible outcomes.
+                Leading-edge AR/VR/XR, SEO, and web tools delivering unmatched performance and results.
               </p>
             </div>
 
             {/* Item 3 */}
             <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              Discovery & Analysis
+              <h4 className="font-bold text-gray-900 mb-1">Insights & Research</h4>
+              <p className="text-sm text-gray-500">Deep market analysis uncovering opportunities to outpace your competition.</p>
             </div>
 
             {/* Item 4 */}
             <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              Deployment & Support
+              <h4 className="font-bold text-gray-900 mb-1">Usability Testing</h4>
+              <p className="text-sm text-gray-500">Rigorous checks ensuring seamless experiences that convert visitors into loyal customers.</p>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@ const AboutSection = () => {
                                     <span className="text-5xl lg:text-6xl font-bold tracking-tight">88%</span>
                                 </div>
                                 <p className="text-xs lg:text-sm font-medium text-blue-100 leading-snug relative z-10 max-w-[140px]">
-                                    Average revenue growth for per successful clients
+                                    Average increase in qualified leads for our long‑term clients
                                 </p>
                             </div>
 
@@ -126,20 +126,20 @@ const AboutSection = () => {
                                     <span className="absolute text-2xl lg:text-3xl font-bold">78%</span>
                                 </div>
                                 <p className="text-xs font-medium text-slate-400 relative z-10 leading-relaxed max-w-[140px]">
-                                    Average revenue growth for per successful clients
+                                    Average growth in online visibility after our SEO and marketing campaigns
                                 </p>
                             </div>
 
                             {/* 4. Bottom Right: Stacked Pills */}
                             <div className="flex flex-col justify-center items-center gap-3 pl-2 lg:pl-4 aspect-[4/4.5]">
                                 <div className="w-full bg-[#0F172A] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer border border-slate-700 whitespace-nowrap">
-                                    Cybersecurity
+                                    Digital Marketing & SEO
                                 </div>
                                 <div className="w-full bg-[#E11D48] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer whitespace-nowrap">
-                                    Infrastructure Management
+                                    Website & Logo Design
                                 </div>
                                 <div className="w-full bg-[#2563EB] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer whitespace-nowrap">
-                                    Operational Excellence
+                                    Immersive Tech - AR · VR · XR
                                 </div>
                             </div>
 
@@ -154,8 +154,8 @@ const AboutSection = () => {
                     </span>
                     
                     <h2 className="text-4xl lg:text-[3.5rem] text-[#0F172A] mb-10 leading-[1.1]">
-                        <span className="font-bold">Comprehensive</span> <span className="font-[300]">IT Solution</span> <br/>
-                        <span className="font-[300]">Growth</span> <span className="font-bold">& Efficiency</span>
+                        <span className="font-bold">Comprehensive Digital Solution</span> <br/>
+                        <span className="font-bold">for Growth & Efficiency</span>
                     </h2>
 
                     <div className="space-y-10">
@@ -166,7 +166,7 @@ const AboutSection = () => {
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Innovation at our core</h4>
-                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">In today's competitive business, the demand for efficient cost-effective IT solutions has never been more critic.</p>
+                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">We blend strategy, creativity, and technology to provide digital solutions that ensure your brand ahead of the curve.</p>
                             </div>
                         </div>
 
@@ -177,7 +177,7 @@ const AboutSection = () => {
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Simplifying complexity</h4>
-                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">In today's competitive business, the demand for efficient cost-effective IT solutions has never been more critic.</p>
+                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">From websites and SEO to immersive technologies, we turn complex digital demands into seamless, results‑driven experiences.</p>
                             </div>
                         </div>
 
@@ -187,8 +187,8 @@ const AboutSection = () => {
                                 <BarChart2 className="text-[#0F172A] w-7 h-7 group-hover:text-[#2563EB] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Empowering growth</h4>
-                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">In today's competitive business, the demand for efficient cost-effective IT solutions has never been more critic.</p>
+                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Fueling growth</h4>
+                                <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">Our dedicated team focuses on measurable outcomes—more traffic, better engagement, and stronger brand presence across all channels.</p>
                             </div>
                         </div>
                     </div>

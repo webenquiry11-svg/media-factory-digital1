@@ -33,18 +33,18 @@ const Footer = () => {
               <div className="flex items-center gap-4">
                 <div className="flex items-start">
                   <ArrowUp className="text-blue-600 w-8 h-8 mt-2" strokeWidth={3} />
-                  <span className="text-7xl font-bold tracking-tighter">88%</span>
+                  <span className="text-7xl font-bold tracking-tighter">95%</span>
                 </div>
                 <div className="text-gray-400 text-sm leading-relaxed max-w-[150px]">
-                  Average revenue growth for per successful clients
+                  success rate in SEO, web development, and immersive tech initiatives.
                 </div>
               </div>
 
               {/* Stat 2 */}
               <div className="flex items-center gap-4">
-                <span className="text-7xl font-bold tracking-tighter">1.3m</span>
+                <span className="text-7xl font-bold tracking-tighter">1.5m</span>
                 <div className="text-gray-400 text-sm leading-relaxed max-w-[150px]">
-                  Average revenue growth for per successful clients
+                  leads generated, driving client growth with targeted digital marketing.
                 </div>
               </div>
             </div>

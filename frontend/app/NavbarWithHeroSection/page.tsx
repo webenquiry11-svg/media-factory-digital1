@@ -57,10 +57,10 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-10 text-base font-bold text-slate-600">
-            <Link href="#" className="flex items-center gap-1 text-[#1d4ed8]">Home <ChevronDown size={14} /></Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Pages <ChevronDown size={14} /></Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Shop <ChevronDown size={14} /></Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Blog <ChevronDown size={14} /></Link>
+            <Link href="#" className="flex items-center gap-1 text-[#1d4ed8]">Home</Link>
+            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Services</Link>
+            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">About Us</Link>
+            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Portfolio</Link>
             <Link href="#" className="hover:text-[#1d4ed8] transition-colors">Contact</Link>
           </nav>
 
@@ -117,8 +117,9 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 p-6 flex flex-col gap-5">
             <Link href="#" className="text-[#1d4ed8] font-bold text-lg">Home</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">Pages</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">Shop</Link>
+            <Link href="#" className="text-slate-600 font-bold text-lg">Services</Link>
+            <Link href="#" className="text-slate-600 font-bold text-lg">About Us</Link>
+            <Link href="#" className="text-slate-600 font-bold text-lg">Portfolio</Link>
             <Link href="#" className="text-slate-600 font-bold text-lg">Contact</Link>
             <button className="bg-[#0F172A] text-white px-6 py-4 rounded-full text-base font-bold w-full mt-2">Sign Up Now</button>
           </div>
@@ -176,16 +177,16 @@ const HeroSection = () => {
       <div className="w-full border-b border-gray-200/60 bg-white/50 backdrop-blur-sm hidden lg:block overflow-hidden">
         <div className="animate-marquee py-4">
           <div className="flex-shrink-0 flex justify-around items-center min-w-full px-12">
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Achieve business goals solution</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Innovation in every presence</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Perfect solution for success</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Excellence in tailored IT Services</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Innovation in every click</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Smart IT for smarter business</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Tailored tech, measurable results</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Secure, scalable, and always on</div>
           </div>
           <div className="flex-shrink-0 flex justify-around items-center min-w-full px-12">
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Achieve business goals solution</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Innovation in every presence</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Perfect solution for success</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Excellence in tailored IT Services</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Innovation in every click</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Smart IT for smarter business</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Tailored tech, measurable results</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Secure, scalable, and always on</div>
           </div>
         </div>
       </div>
@@ -196,13 +197,13 @@ const HeroSection = () => {
           {/* --- Left Content --- */}
           <div className="max-w-2xl relative z-20">
             <h1 className="text-6xl lg:text-[5rem] text-[#0F172A] leading-[1.1] mb-8 tracking-tight font-sans cursor-text">
-              <span className="font-[300]">Transform</span> <span className="font-[700]">Your</span> <br />
-              <span className="font-[700]">Business Through</span> <br />
-              <span className="font-[700]">Strategic</span> <span className="font-[300]">IT Solutions</span>
+              <span className="font-[700]">Elevate Your Business</span> <br />
+              <span className="font-[700]">With Strategic</span> <br />
+              <span className="font-[700]">IT Solutions</span>
             </h1>
             
             <p className="text-lg text-slate-500 mb-10 leading-relaxed max-w-lg font-normal cursor-text">
-              In today's competitive business, the demand for efficient and cost-effective IT solutions has never been more critical.
+              In today's competitive market, businesses require efficient, scalable, and cost-effective IT services that drive growth, reduce complexity, and stay ahead of change.
             </p>
             
             <div className="flex items-center gap-8 mb-10">

@@ -87,29 +87,27 @@ const WhyChooseSection = () => {
                 <span className="text-white font-bold text-sm tracking-wide">Why Choose Us</span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-medium text-gray-900 leading-[1.25]">
-                <span className="font-bold">SassTech</span> makes you a better <br />
-                elevating your team's wellness <br />
-                optimizing <span className="font-extrabold text-black">Business Growth.</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-[1.25]">
+                Why Choose Media Factory?
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
-                In today's competitive business, the demand for efficient and cost-effective IT solutions has never been more critical.
+            <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
+                Proven digital experts turning ambitious brands into market leaders with tailored strategies and cutting-edge tech.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Expertise & Specialization</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                    In today's competitive business demand cost-effective IT solutions has never
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Results-Driven Creativity</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                    Bold campaigns that deliver measurable ROI through SEO, immersive tech, and stunning web experiences.
                 </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-blue-500 shadow-sm">
-                <h4 className="font-bold text-lg text-gray-900 mb-3">Expertise & Specialization</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                    In today's competitive business demand cost-effective IT solutions has never
+                <h4 className="font-bold text-lg text-gray-900 mb-3">Seamless Partnership</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                    Dedicated support from strategy to launch, ensuring your vision scales effortlessly with expert guidance.
                 </p>
             </div>
           </div>

@@ -48,44 +48,39 @@ const WorkShowcaseSection = () => {
     {
       id: 1,
       category: 'Excellent Performance',
-      title: 'Creative UI/UX Designing',
-      // Abstract 3D shape image
+      title: 'Creative Designing',
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#5B8DEF]', // Light Periwinkle Blue
+      bgColor: 'bg-[#5B8DEF]',
       overlayColor: 'mix-blend-overlay opacity-60'
     },
     {
       id: 2,
       category: 'Excellent Performance',
-      title: 'Mobile Application Development',
-      // Hand holding phone dark mode
+      title: 'Targeted Marketing',
       image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#00875A]', // Deep Green
+      bgColor: 'bg-[#00875A]',
       overlayColor: 'mix-blend-normal opacity-90'
     },
     {
       id: 3,
       category: 'Excellent Performance',
-      title: 'Cloud Computing System',
-      // Laptop mockup
+      title: 'SEO Mastery',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#1E1B4B]', // Dark Navy/Purple
+      bgColor: 'bg-[#1E1B4B]',
       overlayColor: 'mix-blend-normal opacity-80'
     },
     {
       id: 4,
       category: 'Excellent Performance',
-      title: 'Mobile Application Design',
-      // Dashboard UI
+      title: 'Custom Web Builds',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#8B5CF6]', // Bright Purple
+      bgColor: 'bg-[#8B5CF6]',
       overlayColor: 'mix-blend-normal opacity-90'
     },
     {
       id: 5,
       category: 'Excellent Performance',
-      title: 'Creative UI/UX Designing',
-      // Duplicate abstract for loop effect
+      title: 'AR/VR/XR Experiences',
       image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop', 
       bgColor: 'bg-[#5B8DEF]',
       overlayColor: 'mix-blend-overlay opacity-60'
@@ -99,12 +94,12 @@ const WorkShowcaseSection = () => {
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
           <div className="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/5">
-            <span className="text-gray-200 text-sm font-medium tracking-wide">Work Showcase</span>
+            <span className="text-gray-200 text-sm font-medium tracking-wide">Portfolio Highlights</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Comprehensive IT Solution <br />
-            Growth & Efficiency
+            Digital Excellence<br />
+            Delivered Impact & Innovation
           </h2>
         </div>
 
