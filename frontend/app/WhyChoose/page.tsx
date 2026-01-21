@@ -1,5 +1,6 @@
 'use client'; // <--- ADD THIS LINE HERE
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // --- SVGs for the Brand Logos (Unchanged) ---
 const FigmaLogo = () => (
@@ -51,30 +52,46 @@ const WhyChooseSection = () => {
             
             {/* Image is Absolute to fill the stretched container entirely */}
             <img 
-                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="/why us.png" 
                 alt="Team working together" 
                 className="absolute inset-0 w-full h-full object-cover rounded-[3rem] grayscale-[10%]"
             />
-
+            
             {/* Floating Card: Figma (Top Left) */}
-            <div className="absolute top-8 -left-4 lg:-left-8 bg-white p-6 rounded-3xl shadow-xl shadow-gray-200/50 z-20">
+            <motion.div 
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="absolute top-8 left-4 lg:-left-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
+            >
                 <FigmaLogo />
-            </div>
+            </motion.div>
 
             {/* Floating Card: Notion (Top Right) */}
-            <div className="absolute top-12 right-4 lg:-right-4 bg-white p-6 rounded-3xl shadow-xl shadow-gray-200/50 z-20">
+            <motion.div 
+              animate={{ y: [0, 15, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+              className="absolute top-12 right-4 lg:-right-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
+            >
                 <NotionLogo />
-            </div>
+            </motion.div>
 
-            {/* Floating Card: OpenAI (Middle Left) */}
-            <div className="absolute top-[45%] left-8 lg:left-12 -translate-y-1/2 bg-white p-8 rounded-3xl shadow-2xl shadow-gray-300/50 z-20">
+            {/* Floating Card: OpenAI (Bottom Left) */}
+            <motion.div 
+              animate={{ x: [0, 10, 0], y: [0, -5, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 0.5 }}
+              className="absolute bottom-24 left-4 lg:-left-8 bg-white p-6 rounded-3xl shadow-2xl shadow-gray-300/50 z-20"
+            >
                 <OpenAILogo />
-            </div>
+            </motion.div>
 
-            {/* Floating Card: Colorful Cube (Bottom Center) */}
-            <div className="absolute bottom-12 left-1/2 lg:left-[45%] -translate-x-1/2 bg-white p-6 rounded-3xl shadow-xl shadow-gray-200/50 z-20">
+            {/* Floating Card: Colorful Cube (Bottom Right) */}
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 1.5 }}
+              className="absolute bottom-8 right-4 lg:-right-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
+            >
                 <ColorfulCubeLogo />
-            </div>
+            </motion.div>
             
         </div>
 

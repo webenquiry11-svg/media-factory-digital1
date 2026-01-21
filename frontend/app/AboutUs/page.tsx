@@ -86,7 +86,7 @@ const AboutSection = () => {
                             {/* 2. Top Right: Image & Badge */}
                             <div className="bg-[#0F172A] rounded-[2rem] relative overflow-hidden aspect-[4/4.5] shadow-xl group">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                                    src="/about.png" 
                                     alt="Happy Client"
                                     fill
                                     priority
@@ -202,4 +202,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-

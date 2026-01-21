@@ -225,7 +225,7 @@ const HeroSection = () => {
                {/* 2. The Person Image */}
                <div className="relative w-full h-[90%] rounded-b-[3rem] overflow-hidden">
                  <Image 
-                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" 
+                   src="/hero img.png" 
                    alt="Business Professional"
                    fill
                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 

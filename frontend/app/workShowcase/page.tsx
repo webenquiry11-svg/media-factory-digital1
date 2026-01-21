@@ -49,15 +49,15 @@ const WorkShowcaseSection = () => {
       id: 1,
       category: 'Excellent Performance',
       title: 'Creative Designing',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#ba1408]',
-      overlayColor: 'mix-blend-overlay opacity-60'
+      image: '/creative.png', 
+      bgColor: 'bg-gray-100',
+      overlayColor: ''
     },
     {
       id: 2,
       category: 'Excellent Performance',
       title: 'Targeted Marketing',
-      image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=800&auto=format&fit=crop', 
+      image: '/marketing.png', 
       bgColor: 'bg-[#00875A]',
       overlayColor: 'mix-blend-normal opacity-90'
     },
@@ -65,7 +65,7 @@ const WorkShowcaseSection = () => {
       id: 3,
       category: 'Excellent Performance',
       title: 'SEO Mastery',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', 
+      image: '/seo.png', 
       bgColor: 'bg-[#ba1408]',
       overlayColor: 'mix-blend-normal opacity-80'
     },
@@ -73,7 +73,7 @@ const WorkShowcaseSection = () => {
       id: 4,
       category: 'Excellent Performance',
       title: 'Custom Web Builds',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop', 
+      image: '/web dev.png', 
       bgColor: 'bg-[#8B5CF6]',
       overlayColor: 'mix-blend-normal opacity-90'
     },
@@ -82,8 +82,8 @@ const WorkShowcaseSection = () => {
       category: 'Excellent Performance',
       title: 'AR/VR/XR Experiences',
       image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#ba1408]',
-      overlayColor: 'mix-blend-overlay opacity-60'
+      bgColor: 'bg-gray-100',
+      overlayColor: ''
     }
   ];
 
