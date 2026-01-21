@@ -36,7 +36,7 @@ const RevenueSection = () => {
   };
 
   return (
-    <section className="py-24 bg-white font-sans overflow-hidden">
+    <section id="services" className="py-24 bg-white font-sans overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* --- Header Section --- */}
         <motion.div
@@ -47,7 +47,7 @@ const RevenueSection = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <div className="max-w-3xl">
-            <span className="bg-blue-50 text-[#1d4ed8] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+            <span className="bg-[#ba1408]/10 text-[#ba1408] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
               What We Offering
             </span>
             <h2 className="text-4xl lg:text-[3.5rem] font-bold text-[#0F172A] leading-[1.15]">
@@ -146,19 +146,19 @@ const RevenueSection = () => {
           {/* 2. Website Design (Center - Spans 2 Rows) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#EFF6FF] rounded-[2.5rem] p-10 flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 lg:row-span-2 h-auto min-h-[520px]"
+            className="bg-[#ba1408]/5 rounded-[2.5rem] p-10 flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 lg:row-span-2 h-auto min-h-[520px]"
           >
-            <div className="absolute top-8 right-8 w-10 h-10 rounded-full border border-blue-200"></div>
+            <div className="absolute top-8 right-8 w-10 h-10 rounded-full border border-[#ba1408]/20"></div>
 
             <div className="relative z-10">
-              <p className="text-[#2563EB] font-bold text-sm tracking-wide mb-3 uppercase">
+              <p className="text-[#ba1408] font-bold text-sm tracking-wide mb-3 uppercase">
                 Excellent Performance
               </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 Website <br /> Development
               </h3>
 
-              <button className="w-14 h-14 bg-[#1d4ed8] rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300 cursor-pointer">
+              <button className="w-14 h-14 bg-[#ba1408] rounded-full flex items-center justify-center shadow-lg shadow-[#ba1408]/30 group-hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <ArrowUpRight className="text-white" size={24} />
               </button>
             </div>
@@ -170,21 +170,21 @@ const RevenueSection = () => {
                 <span className="font-bold text-yellow-500 text-sm">JS</span>
               </div>
               <div className="absolute top-20 right-10 w-20 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center z-20 animate-bounce-slow delay-75 border border-slate-100">
-                <span className="font-bold text-blue-400 text-sm">React</span>
+                <span className="font-bold text-[#ba1408] text-sm">React</span>
               </div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center z-20 animate-bounce-slow delay-150 border border-slate-100">
                 <span className="font-bold text-green-500 text-sm">Vue</span>
               </div>
 
               {/* Tall Browser Window - Covering full height */}
-              <div className="absolute bottom-0 right-0 w-[90%] h-[95%] bg-white rounded-tl-3xl border-t border-l border-blue-100 shadow-2xl overflow-hidden translate-x-6 translate-y-6">
+              <div className="absolute bottom-0 right-0 w-[90%] h-[95%] bg-white rounded-tl-3xl border-t border-l border-[#ba1408]/20 shadow-2xl overflow-hidden translate-x-6 translate-y-6">
                 <div className="bg-[#1E293B] h-10 w-full flex items-center gap-2 px-5">
                   <div className="w-3 h-3 rounded-full bg-red-400"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                   <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
                 <div className="p-0 h-full bg-slate-50 relative">
-                  <div className="absolute right-0 bottom-0 w-[150px] h-[150px] bg-[#1d4ed8] rounded-tl-[4rem] flex items-center justify-center">
+                  <div className="absolute right-0 bottom-0 w-[150px] h-[150px] bg-[#ba1408] rounded-tl-[4rem] flex items-center justify-center">
                     <span className="text-white text-6xl font-bold">V</span>
                   </div>
                   <div className="p-8 space-y-6 opacity-40">
@@ -210,7 +210,7 @@ const RevenueSection = () => {
             className="bg-[#F8FAFC] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300 border border-slate-100"
           >
             <div className="relative z-10">
-              <p className="text-[#4F46E5] font-bold text-sm tracking-wide mb-3 uppercase">
+              <p className="text-[#ba1408] font-bold text-sm tracking-wide mb-3 uppercase">
                 Excellent Performance
               </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
@@ -218,7 +218,7 @@ const RevenueSection = () => {
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100 group-hover:scale-110 transition-transform duration-300 cursor-pointer">
-                <ArrowUpRight className="text-[#4F46E5]" size={24} />
+                <ArrowUpRight className="text-[#ba1408]" size={24} />
               </button>
             </div>
 
@@ -241,11 +241,11 @@ const RevenueSection = () => {
                       </span>
                     </div>
                     <div className="flex items-end gap-2 h-16">
-                      <div className="w-1/5 bg-indigo-100 h-[40%] rounded-sm"></div>
-                      <div className="w-1/5 bg-indigo-500 h-[70%] rounded-sm"></div>
-                      <div className="w-1/5 bg-indigo-100 h-[50%] rounded-sm"></div>
-                      <div className="w-1/5 bg-indigo-500 h-[100%] rounded-sm"></div>
-                      <div className="w-1/5 bg-indigo-100 h-[60%] rounded-sm"></div>
+                      <div className="w-1/5 bg-[#ba1408]/20 h-[40%] rounded-sm"></div>
+                      <div className="w-1/5 bg-[#ba1408] h-[70%] rounded-sm"></div>
+                      <div className="w-1/5 bg-[#ba1408]/20 h-[50%] rounded-sm"></div>
+                      <div className="w-1/5 bg-[#ba1408] h-[100%] rounded-sm"></div>
+                      <div className="w-1/5 bg-[#ba1408]/20 h-[60%] rounded-sm"></div>
                     </div>
                   </div>
                   <div className="absolute -top-12 right-12 bg-white p-3 rounded-2xl shadow-lg border border-slate-50 w-28 h-28 flex flex-col items-center justify-center">
@@ -257,13 +257,13 @@ const RevenueSection = () => {
                         viewBox="0 0 32 32"
                         className="w-full h-full -rotate-90"
                       >
-                        <circle cx="16" cy="16" r="16" fill="#EEF2FF" />
+                        <circle cx="16" cy="16" r="16" fill="#ba1408" fillOpacity="0.1" />
                         <circle
                           cx="16"
                           cy="16"
                           r="8"
                           fill="transparent"
-                          stroke="#6366F1"
+                          stroke="#ba1408"
                           strokeWidth="16"
                           strokeDasharray="75 100"
                         />
@@ -333,7 +333,7 @@ const RevenueSection = () => {
               <div className="relative w-full h-full">
                 {/* Abstract Cloud Shapes */}
                 <div className="absolute bottom-[-20px] left-[-20px] w-48 h-48 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                <div className="absolute bottom-[-20px] right-[-20px] w-48 h-48 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-[-20px] right-[-20px] w-48 h-48 bg-[#ba1408]/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
                 <div className="absolute bottom-[40px] left-[20%] w-48 h-48 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">

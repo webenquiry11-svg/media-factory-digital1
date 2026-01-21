@@ -48,7 +48,7 @@ const WorkingRoadmap = () => {
 
   return (
     // Updated Section Styles: Added mx-4 (margin x-axis) and rounded-[3rem] (border-radius)
-    <section className="bg-[#0B0F19] py-24 relative overflow-hidden font-sans text-white mx-4 md:mx-8 lg:mx-12 rounded-[3rem] my-8 shadow-2xl">
+    <section id="process" className="bg-[#0B0F19] py-24 relative overflow-hidden font-sans text-white mx-4 md:mx-8 lg:mx-12 rounded-[3rem] my-8 shadow-2xl">
       
       {/* Background Bottom Wavy Line (Purple/Blue Gradient) */}
       <div className="absolute bottom-0 left-0 w-full h-[150px] pointer-events-none z-0">
@@ -69,9 +69,9 @@ const WorkingRoadmap = () => {
             />
             <defs>
                 <linearGradient id="purpleGradient" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#4F46E5" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#ba1408" stopOpacity="0" />
                     <stop offset="50%" stopColor="#A855F7" />
-                    <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#ba1408" stopOpacity="0" />
                 </linearGradient>
             </defs>
          </svg>
@@ -80,7 +80,7 @@ const WorkingRoadmap = () => {
          <motion.div 
             animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="absolute bottom-[10%] left-[10%] w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_#60A5FA]"
+            className="absolute bottom-[10%] left-[10%] w-3 h-3 bg-red-700 rounded-full shadow-[0_0_10px_#ba1408]"
          ></motion.div>
          <motion.div 
             animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
@@ -90,7 +90,7 @@ const WorkingRoadmap = () => {
          <motion.div 
             animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
             transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
-            className="absolute bottom-[48%] right-[15%] w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_#60A5FA]"
+            className="absolute bottom-[48%] right-[15%] w-3 h-3 bg-red-700 rounded-full shadow-[0_0_10px_#ba1408]"
          ></motion.div>
       </div>
 
@@ -118,7 +118,7 @@ const WorkingRoadmap = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-              <button className="bg-[#1d4ed8] text-white px-9 py-4 rounded-full font-bold shadow-xl shadow-blue-900/30 hover:bg-blue-600 transition-all hover:-translate-y-1 text-sm">
+              <button className="bg-[#ba1408] text-white px-9 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700 transition-all hover:-translate-y-1 text-sm">
                 Get Started
               </button>
               
@@ -186,8 +186,8 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -8, 0] }} 
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">01</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#1d4ed8] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">01</div>
+                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
                             <Brain size={32} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-sm">Brainstorming</span>
                         </div>
@@ -200,7 +200,7 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -10, 0] }} 
                         transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
                     >
-                        <div className="absolute -top-1 left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">02</div>
+                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">02</div>
                         <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
                             <FileSearch size={24} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-xs text-slate-200">UX Research</span>
@@ -214,8 +214,8 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -6, 0] }} 
                         transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.2 }}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">03</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#0E7490] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">03</div>
+                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
                             <Package size={32} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-sm">Product Designing</span>
                         </div>
@@ -228,8 +228,8 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -9, 0] }} 
                         transition={{ repeat: Infinity, duration: 5.2, ease: "easeInOut", delay: 0.7 }}
                     >
-                        <div className="absolute -top-1 left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">04</div>
-                        <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#1E1B4B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
+                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">04</div>
+                        <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
                             <Code size={24} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-xs text-slate-200">Front-End Development</span>
                         </div>
@@ -242,7 +242,7 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -7, 0] }} 
                         transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.3 }}
                     >
-                        <div className="absolute -top-1 left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">05</div>
+                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">05</div>
                         <div className="w-28 h-28 lg:w-36 lg:h-36 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
                             <ClipboardCheck size={28} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-xs text-slate-200">Usability Testing</span>
@@ -256,7 +256,7 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -10, 0] }} 
                         transition={{ repeat: Infinity, duration: 4.2, ease: "easeInOut", delay: 0.1 }}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">06</div>
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">06</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#F43F5E] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19] shadow-pink-500/20">
                             <Terminal size={32} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-sm">Back-End Development</span>
@@ -270,8 +270,8 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -5, 0] }} 
                         transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.6 }}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">07</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#1d4ed8] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">07</div>
+                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
                             <Search size={32} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-sm">SEO Optimization</span>
                         </div>
@@ -284,8 +284,8 @@ const WorkingRoadmap = () => {
                         animate={{ y: [0, -8, 0] }} 
                         transition={{ repeat: Infinity, duration: 4.6, ease: "easeInOut", delay: 0.4 }}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#3B82F6] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">08</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#0E7490] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">08</div>
+                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
                             <Megaphone size={32} className="text-white mb-2" strokeWidth={1.5} />
                             <span className="font-semibold text-sm">Digital Marketing</span>
                         </div>

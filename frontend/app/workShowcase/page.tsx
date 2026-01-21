@@ -50,7 +50,7 @@ const WorkShowcaseSection = () => {
       category: 'Excellent Performance',
       title: 'Creative Designing',
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#5B8DEF]',
+      bgColor: 'bg-[#ba1408]',
       overlayColor: 'mix-blend-overlay opacity-60'
     },
     {
@@ -66,7 +66,7 @@ const WorkShowcaseSection = () => {
       category: 'Excellent Performance',
       title: 'SEO Mastery',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#1E1B4B]',
+      bgColor: 'bg-[#ba1408]',
       overlayColor: 'mix-blend-normal opacity-80'
     },
     {
@@ -82,22 +82,22 @@ const WorkShowcaseSection = () => {
       category: 'Excellent Performance',
       title: 'AR/VR/XR Experiences',
       image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop', 
-      bgColor: 'bg-[#5B8DEF]',
+      bgColor: 'bg-[#ba1408]',
       overlayColor: 'mix-blend-overlay opacity-60'
     }
   ];
 
   return (
-    <div className="bg-[#110B38] py-20 min-h-screen font-sans flex flex-col justify-center">
+    <div id="portfolio" className="bg-gray-50 py-20 min-h-screen font-sans flex flex-col justify-center">
       <div className="w-full px-4 lg:px-8">
         
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/5">
-            <span className="text-gray-200 text-sm font-medium tracking-wide">Portfolio Highlights</span>
+          <div className="inline-block px-5 py-2 rounded-full bg-white border border-gray-200 shadow-sm">
+            <span className="text-[#ba1408] text-sm font-bold tracking-wide">Portfolio Highlights</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Digital Excellence<br />
             Delivered Impact & Innovation
           </h2>
@@ -131,10 +131,10 @@ const WorkShowcaseSection = () => {
 
                   {/* Text Content Below */}
                   <div className="mt-6 text-left pl-1">
-                    <p className="text-gray-400 text-sm font-medium mb-2">
+                    <p className="text-gray-500 text-sm font-medium mb-2">
                       {item.category}
                     </p>
-                    <h3 className="text-white text-xl lg:text-2xl font-bold leading-tight">
+                    <h3 className="text-gray-900 text-xl lg:text-2xl font-bold leading-tight">
                       {item.title}
                     </h3>
                   </div>

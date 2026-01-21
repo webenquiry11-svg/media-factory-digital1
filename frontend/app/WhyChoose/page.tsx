@@ -40,7 +40,7 @@ const ColorfulCubeLogo = () => (
 
 const WhyChooseSection = () => {
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center p-6 lg:p-16 font-sans">
+    <div id="why-choose-us" className="bg-white min-h-screen flex items-center justify-center p-6 lg:p-16 font-sans">
       
       {/* Container - Grid Layout with items-stretch to force equal height */}
       <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
@@ -83,7 +83,7 @@ const WhyChooseSection = () => {
         <div className="flex flex-col justify-center space-y-10 pl-0 lg:pl-4 py-4">
           
           <div className="space-y-6">
-            <div className="inline-block bg-blue-600 px-6 py-2 rounded-full">
+            <div className="inline-block bg-red-700 px-6 py-2 rounded-full">
                 <span className="text-white font-bold text-sm tracking-wide">Why Choose Us</span>
             </div>
 
@@ -104,7 +104,7 @@ const WhyChooseSection = () => {
                 </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-blue-500 shadow-sm">
+            <div className="bg-white p-8 rounded-2xl border border-[#ba1408] shadow-sm">
                 <h4 className="font-bold text-lg text-gray-900 mb-3">Seamless Partnership</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
                     Dedicated support from strategy to launch, ensuring your vision scales effortlessly with expert guidance.
@@ -113,7 +113,7 @@ const WhyChooseSection = () => {
           </div>
 
           <div className="pt-2 flex items-center gap-6">
-            <span className="text-7xl font-bold text-blue-600 tracking-tight">
+            <span className="text-7xl font-bold text-red-700 tracking-tight">
                 1.3m
             </span>
             <div className="text-sm font-semibold text-gray-500 leading-snug">

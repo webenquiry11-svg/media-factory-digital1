@@ -70,7 +70,7 @@ const AboutSection = () => {
                         <div className="grid grid-cols-2 gap-5" style={{ transform: "translateZ(20px)" }}>
                             
                             {/* 1. Top Left: 88% Growth */}
-                            <div className="bg-[#2563EB] rounded-[2rem] p-6 text-white flex flex-col justify-center items-center text-center aspect-[4/4.5] shadow-xl relative overflow-hidden group">
+                            <div className="bg-[#ba1408] rounded-[2rem] p-6 text-white flex flex-col justify-center items-center text-center aspect-[4/4.5] shadow-xl relative overflow-hidden group">
                                 {/* Background Glow */}
                                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
                                 
@@ -89,6 +89,8 @@ const AboutSection = () => {
                                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
                                     alt="Happy Client"
                                     fill
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                                 />
                                 
@@ -121,7 +123,7 @@ const AboutSection = () => {
                                     {/* SVG Circle Progress */}
                                     <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
                                         <path className="text-slate-800" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                                        <path className="text-[#2563EB]" strokeDasharray="78, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                                        <path className="text-[#ba1408]" strokeDasharray="78, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
                                     </svg>
                                     <span className="absolute text-2xl lg:text-3xl font-bold">78%</span>
                                 </div>
@@ -138,7 +140,7 @@ const AboutSection = () => {
                                 <div className="w-full bg-[#E11D48] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer whitespace-nowrap">
                                     Website & Logo Design
                                 </div>
-                                <div className="w-full bg-[#2563EB] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer whitespace-nowrap">
+                                <div className="w-full bg-[#ba1408] text-white py-3.5 px-4 rounded-full text-[11px] lg:text-xs font-bold text-center shadow-lg hover:scale-105 transition-transform cursor-pointer whitespace-nowrap">
                                     Immersive Tech - AR · VR · XR
                                 </div>
                             </div>
@@ -149,7 +151,7 @@ const AboutSection = () => {
 
                 {/* --- Right Side: Text Content --- */}
                 <div>
-                    <span className="bg-blue-50 text-[#2563EB] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+                    <span className="bg-blue-50 text-[#ba1408] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
                         About Us
                     </span>
                     
@@ -161,33 +163,33 @@ const AboutSection = () => {
                     <div className="space-y-10">
                         {/* Feature 1 */}
                         <div className="flex gap-6 group">
-                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-blue-200 transition-colors duration-300">
-                                <Lightbulb className="text-[#0F172A] w-7 h-7 group-hover:text-[#2563EB] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
+                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-red-700-200 transition-colors duration-300">
+                                <Lightbulb className="text-[#0F172A] w-7 h-7 group-hover:text-[#ba1408] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Innovation at our core</h4>
+                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#ba1408] transition-colors">Innovation at our core</h4>
                                 <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">We blend strategy, creativity, and technology to provide digital solutions that ensure your brand ahead of the curve.</p>
                             </div>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="flex gap-6 group">
-                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-blue-200 transition-colors duration-300">
-                                <Target className="text-[#0F172A] w-7 h-7 group-hover:text-[#2563EB] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
+                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-red-700-200 transition-colors duration-300">
+                                <Target className="text-[#0F172A] w-7 h-7 group-hover:text-[#ba1408] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Simplifying complexity</h4>
+                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#ba1408] transition-colors">Simplifying complexity</h4>
                                 <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">From websites and SEO to immersive technologies, we turn complex digital demands into seamless, results‑driven experiences.</p>
                             </div>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="flex gap-6 group">
-                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-blue-200 transition-colors duration-300">
-                                <BarChart2 className="text-[#0F172A] w-7 h-7 group-hover:text-[#2563EB] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
+                            <div className="mt-1 bg-white w-14 h-14 rounded-full border border-gray-100 shadow-sm flex items-center justify-center shrink-0 group-hover:border-red-700-200 transition-colors duration-300">
+                                <BarChart2 className="text-[#0F172A] w-7 h-7 group-hover:text-[#ba1408] transition-all duration-300 group-hover:-translate-y-1.5" strokeWidth={1.5} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#2563EB] transition-colors">Fueling growth</h4>
+                                <h4 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#ba1408] transition-colors">Fueling growth</h4>
                                 <p className="text-slate-500 leading-relaxed text-[15px] font-medium max-w-md">Our dedicated team focuses on measurable outcomes—more traffic, better engagement, and stronger brand presence across all channels.</p>
                             </div>
                         </div>
@@ -200,3 +202,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

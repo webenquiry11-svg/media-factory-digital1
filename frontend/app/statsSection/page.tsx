@@ -5,7 +5,7 @@ import { BarChart3, ChevronDown, MoreHorizontal } from 'lucide-react';
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 lg:p-12 font-sans">
+    <div id="stats" className="min-h-screen bg-gray-50 flex items-center justify-center p-4 lg:p-12 font-sans">
       
       {/* Main Container */}
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
@@ -15,7 +15,7 @@ const Page = () => {
           
           {/* Badge */}
           <div className="inline-block bg-white px-4 py-1.5 rounded-full shadow-sm border border-gray-100">
-            <span className="text-blue-600 font-semibold text-sm">Tech Solution</span>
+            <span className="text-red-700 font-semibold text-sm">Tech Solution</span>
           </div>
 
           {/* Heading */}
@@ -38,8 +38,8 @@ const Page = () => {
             </div>
 
             {/* Item 2 (Active State) */}
-            <div className="bg-white rounded-xl shadow-xl shadow-gray-200/50 p-6 border-l-4 border-blue-600 transform scale-105 transition-transform">
-              <h3 className="text-blue-900 font-bold text-lg mb-2">Advanced Technology</h3>
+            <div className="bg-white rounded-xl shadow-xl shadow-gray-200/50 p-6 border-l-4 border-red-700 transform scale-105 transition-transform">
+              <h3 className="text-[#ba1408] font-bold text-lg mb-2">Advanced Technology</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Leading-edge AR/VR/XR, SEO, and web tools delivering unmatched performance and results.
               </p>
@@ -63,7 +63,7 @@ const Page = () => {
         <div className="relative">
           
           {/* Decorative Background Blob */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#ba1408]/10 rounded-full blur-3xl -z-10"></div>
 
           {/* Main Image */}
           <div className="rounded-3xl overflow-hidden shadow-2xl relative z-0">
@@ -79,7 +79,7 @@ const Page = () => {
             <div className="bg-gray-50 p-2 rounded-full">
               <div className="w-6 h-6 rounded-full bg-red-500 overflow-hidden relative">
                  {/* CSS Flag Simulation */}
-                 <div className="absolute top-0 left-0 w-3 h-3 bg-blue-700 z-10"></div>
+                 <div className="absolute top-0 left-0 w-3 h-3 bg-[#ba1408] z-10"></div>
                  <div className="w-full h-1 bg-white mt-1"></div>
                  <div className="w-full h-1 bg-white mt-1"></div>
               </div>
@@ -94,8 +94,8 @@ const Page = () => {
           {/* Floating Card 2: Usability Testing (Bottom Left) */}
           <div className="absolute bottom-8 -left-8 bg-white p-5 rounded-2xl shadow-xl w-48 z-20">
             <div className="flex justify-between items-start mb-4">
-              <div className="bg-blue-100 p-1.5 rounded-lg">
-                <BarChart3 className="w-5 h-5 text-blue-600" />
+              <div className="bg-[#ba1408]/10 p-1.5 rounded-lg">
+                <BarChart3 className="w-5 h-5 text-red-700" />
               </div>
               <MoreHorizontal className="w-4 h-4 text-gray-400" />
             </div>
@@ -104,12 +104,12 @@ const Page = () => {
             
             {/* Custom Bar Chart CSS */}
             <div className="flex items-end justify-between h-12 gap-1">
-              <div className="w-2 bg-blue-600 h-[40%] rounded-t-sm"></div>
-              <div className="w-2 bg-blue-900 h-[70%] rounded-t-sm"></div>
-              <div className="w-2 bg-blue-600 h-[50%] rounded-t-sm"></div>
-              <div className="w-2 bg-blue-900 h-[30%] rounded-t-sm"></div>
-              <div className="w-2 bg-blue-600 h-[100%] rounded-t-sm"></div>
-              <div className="w-2 bg-blue-900 h-[60%] rounded-t-sm"></div>
+              <div className="w-2 bg-red-700 h-[40%] rounded-t-sm"></div>
+              <div className="w-2 bg-[#ba1408] h-[70%] rounded-t-sm"></div>
+              <div className="w-2 bg-red-700 h-[50%] rounded-t-sm"></div>
+              <div className="w-2 bg-[#ba1408] h-[30%] rounded-t-sm"></div>
+              <div className="w-2 bg-red-700 h-[100%] rounded-t-sm"></div>
+              <div className="w-2 bg-[#ba1408] h-[60%] rounded-t-sm"></div>
             </div>
           </div>
 
@@ -118,9 +118,9 @@ const Page = () => {
             <p className="text-xs font-semibold text-gray-800 mb-2">Your Pie Chart</p>
             <div className="flex items-center gap-4">
               {/* CSS Pie Chart */}
-              <div className="w-12 h-12 rounded-full border-4 border-blue-50 relative bg-white">
+              <div className="w-12 h-12 rounded-full border-4 border-[#ba1408]/10 relative bg-white">
                 <div 
-                  className="absolute inset-0 rounded-full border-4 border-blue-600 border-r-transparent border-b-transparent transform rotate-45"
+                  className="absolute inset-0 rounded-full border-4 border-red-700 border-r-transparent border-b-transparent transform rotate-45"
                 ></div>
               </div>
               <div>

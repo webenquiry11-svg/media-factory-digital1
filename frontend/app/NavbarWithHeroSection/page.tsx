@@ -23,13 +23,6 @@ import {
   Square,
   LayoutGrid
 } from 'lucide-react';
-import AboutSection from '../AboutUs/page';
-import WorkingRoadmap from '../workshop/page';
-import RevenueSection from '../service/page';
-import StatsSection from '../statsSection/page';
-import WhyChooseSection from '../WhyChoose/page';
-import WorkShowcaseSection from '../workShowcase/page';
-import Footer from '../Footer/page';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,31 +30,22 @@ const Navbar = () => {
 
   return (
     <>
-      {/* --- 1. Top Promotional Banner --- */}
-      <div className="bg-[#1d4ed8] text-white text-center py-3 px-4 text-sm font-medium tracking-wide">
-        We're introducing an exceptionally crafted UI/UX template on ThemeForest, designed to deliver outstanding conversion results!
-      </div>
-
       {/* --- 2. Main Navigation --- */}
       <header className="w-full bg-white border-b border-gray-100 relative z-50">
         <div className="container mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
           
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="flex gap-1">
-                <div className="w-3.5 h-7 bg-[#1d4ed8] rounded-full transform -rotate-12"></div>
-                <div className="w-3.5 h-7 bg-[#1d4ed8] rounded-full transform -rotate-12 mt-1"></div>
-            </div>
-            <span className="text-3xl font-bold text-[#0F172A] tracking-tight ml-1">MediaFactory</span>
+            <Image src="/logo.png" alt="MediaFactory Logo" width={240} height={240} className="object-contain" />
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-10 text-base font-bold text-slate-600">
-            <Link href="#" className="flex items-center gap-1 text-[#1d4ed8]">Home</Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Services</Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">About Us</Link>
-            <Link href="#" className="flex items-center gap-1 hover:text-[#1d4ed8] transition-colors">Portfolio</Link>
-            <Link href="#" className="hover:text-[#1d4ed8] transition-colors">Contact</Link>
+            <Link href="/" className="flex items-center gap-1 text-[#ba1408]">Home</Link>
+            <Link href="#services" className="flex items-center gap-1 hover:text-[#ba1408] transition-colors">Services</Link>
+            <Link href="#about" className="flex items-center gap-1 hover:text-[#ba1408] transition-colors">About Us</Link>
+            <Link href="#portfolio" className="flex items-center gap-1 hover:text-[#ba1408] transition-colors">Portfolio</Link>
+            <Link href="#contact" className="hover:text-[#ba1408] transition-colors">Contact</Link>
           </nav>
 
           {/* CTA Button */}
@@ -88,17 +72,17 @@ const Navbar = () => {
                   <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
                     <div className="relative">
                       <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                      <input type="text" placeholder="Full Name" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300" />
+                      <input type="text" placeholder="Full Name" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300" />
                     </div>
                     <div className="relative">
                       <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                      <input type="email" placeholder="Email Address" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300" />
+                      <input type="email" placeholder="Email Address" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300" />
                     </div>
                     <div className="relative">
                       <MessageSquare size={16} className="absolute left-4 top-4 text-slate-400" />
-                      <textarea placeholder="Your Message..." rows={4} className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 resize-none" />
+                      <textarea placeholder="Your Message..." rows={4} className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300 resize-none" />
                     </div>
-                    <button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-lg font-bold transition-all duration-300 mt-2 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] hover:scale-105">
+                    <button type="submit" className="w-full bg-gradient-to-r from-[#ba1408] to-[#ba1408] text-white py-3 rounded-lg font-bold transition-all duration-300 mt-2 shadow-[0_0_15px_rgba(186,20,8,0.5)] hover:shadow-[0_0_25px_rgba(186,20,8,0.8)] hover:scale-105">
                       Send Message
                     </button>
                   </form>
@@ -116,11 +100,11 @@ const Navbar = () => {
         {/* Mobile Menu Dropdown */}
         {isOpen && (
           <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 p-6 flex flex-col gap-5">
-            <Link href="#" className="text-[#1d4ed8] font-bold text-lg">Home</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">Services</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">About Us</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">Portfolio</Link>
-            <Link href="#" className="text-slate-600 font-bold text-lg">Contact</Link>
+            <Link href="/" className="text-[#ba1408] font-bold text-lg">Home</Link>
+            <Link href="#services" className="text-slate-600 font-bold text-lg">Services</Link>
+            <Link href="#about" className="text-slate-600 font-bold text-lg">About Us</Link>
+            <Link href="#portfolio" className="text-slate-600 font-bold text-lg">Portfolio</Link>
+            <Link href="#contact" className="text-slate-600 font-bold text-lg">Contact</Link>
             <button className="bg-[#0F172A] text-white px-6 py-4 rounded-full text-base font-bold w-full mt-2">Sign Up Now</button>
           </div>
         )}
@@ -177,16 +161,16 @@ const HeroSection = () => {
       <div className="w-full border-b border-gray-200/60 bg-white/50 backdrop-blur-sm hidden lg:block overflow-hidden">
         <div className="animate-marquee py-4">
           <div className="flex-shrink-0 flex justify-around items-center min-w-full px-12">
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Innovation in every click</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Smart IT for smarter business</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Tailored tech, measurable results</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Secure, scalable, and always on</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#ba1408]" /> Innovation in every click</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#ba1408]" /> Smart IT for smarter business</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#ba1408]" /> Tailored tech, measurable results</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#ba1408]" /> Secure, scalable, and always on</div>
           </div>
           <div className="flex-shrink-0 flex justify-around items-center min-w-full px-12">
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#1d4ed8]" /> Innovation in every click</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#1d4ed8]" /> Smart IT for smarter business</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#1d4ed8]" /> Tailored tech, measurable results</div>
-              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#1d4ed8]" /> Secure, scalable, and always on</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Globe size={16} className="text-[#ba1408]" /> Innovation in every click</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><Zap size={16} className="text-[#ba1408]" /> Smart IT for smarter business</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><CheckCircle size={16} className="text-[#ba1408]" /> Tailored tech, measurable results</div>
+              <div className="flex items-center gap-2 text-slate-500 text-[13px] font-medium uppercase tracking-wide"><BarChart size={16} className="text-[#ba1408]" /> Secure, scalable, and always on</div>
           </div>
         </div>
       </div>
@@ -208,7 +192,7 @@ const HeroSection = () => {
             
             <div className="flex items-center gap-8 mb-10">
               {/* Added cursor-pointer to buttons so the custom cursor still indicates clickability implicitly or we can override */}
-              <button className="bg-[#1d4ed8] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-blue-600/30 hover:bg-blue-700 transition-all hover:-translate-y-1 text-sm cursor-none">
+              <button className="bg-[#ba1408] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700-700 transition-all hover:-translate-y-1 text-sm cursor-none">
                 Get Started
               </button>
               
@@ -260,8 +244,8 @@ const HeroSection = () => {
                     </div>
                     <span className="text-[#0F172A] font-bold text-sm">Trust pilot</span>
                   </div>
-                  <div className="bg-blue-50 p-1 rounded-full ml-auto">
-                      <CheckCircle size={16} className="text-[#1d4ed8] fill-[#1d4ed8] text-white" />
+                  <div className="bg-[#ba1408]/10 p-1 rounded-full ml-auto">
+                      <CheckCircle size={16} className="text-[#ba1408] fill-[#ba1408] text-white" />
                   </div>
                   <div className="absolute -top-3 -right-2 bg-[#00B67A] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">4.9 ★</div>
                </div>
@@ -272,32 +256,32 @@ const HeroSection = () => {
                   <p className="text-[#0F172A] text-2xl font-bold mb-3">$4820.00</p>
                   {/* Chart Graphic */}
                   <div className="flex items-end gap-1.5 h-10 w-full justify-between">
-                     <div className="w-full h-[40%] bg-blue-100 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#1d4ed8] transition-all group-hover:h-full duration-500"></div></div>
-                     <div className="w-full h-[70%] bg-blue-100 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#1d4ed8] transition-all group-hover:h-full duration-500 delay-75"></div></div>
-                     <div className="w-full h-[50%] bg-blue-100 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#1d4ed8] transition-all group-hover:h-full duration-500 delay-100"></div></div>
-                     <div className="w-full h-[100%] bg-[#1d4ed8] rounded-sm relative shadow-md"></div>
-                     <div className="w-full h-[60%] bg-blue-100 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#1d4ed8] transition-all group-hover:h-full duration-500 delay-150"></div></div>
+                     <div className="w-full h-[40%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500"></div></div>
+                     <div className="w-full h-[70%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-75"></div></div>
+                     <div className="w-full h-[50%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-100"></div></div>
+                     <div className="w-full h-[100%] bg-[#ba1408] rounded-sm relative shadow-md"></div>
+                     <div className="w-full h-[60%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-150"></div></div>
                   </div>
                </div>
 
                {/* 5. Floating "Experience" Badge (Bottom Right) */}
-               <div className="absolute -bottom-8 -right-8 bg-[#1d4ed8] text-white p-6 rounded-tl-[2rem] rounded-tr-[1rem] rounded-bl-[1rem] rounded-br-[2rem] shadow-2xl z-30 flex flex-col items-center justify-center w-36 h-36">
+               <div className="absolute -bottom-8 -right-8 bg-[#ba1408] text-white p-6 rounded-tl-[2rem] rounded-tr-[1rem] rounded-bl-[1rem] rounded-br-[2rem] shadow-2xl z-30 flex flex-col items-center justify-center w-36 h-36">
                   <span className="text-5xl font-bold">8+</span>
-                  <span className="text-[11px] font-medium text-blue-100 mt-1">Years Experience</span>
+                  <span className="text-[11px] font-medium text-red-100 mt-1">Years Experience</span>
                   <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
-                    <ArrowUp size={18} className="text-[#1d4ed8] rotate-45" />
+                    <ArrowUp size={18} className="text-[#ba1408] rotate-45" />
                   </div>
                </div>
 
                {/* 6. Settings Icon (Far Right Edge) */}
-               <div className="absolute top-1/2 -right-20 -translate-y-1/2 bg-[#1d4ed8] w-12 h-12 flex items-center justify-center rounded-lg shadow-lg text-white cursor-pointer hover:bg-blue-700 transition-colors hidden xl:flex">
+               <div className="absolute top-1/2 -right-20 -translate-y-1/2 bg-[#ba1408] w-12 h-12 flex items-center justify-center rounded-lg shadow-lg text-white cursor-pointer hover:bg-red-700-700 transition-colors hidden xl:flex">
                    <Settings size={24} className="animate-spin" />
                </div>
 
             </div>
 
             {/* Background Glows */}
-            <div className="absolute -bottom-10 left-0 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-10 left-0 w-64 h-64 bg-red-700/10 rounded-full blur-3xl -z-10"></div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-400/10 rounded-full blur-3xl -z-10"></div>
           </div>
 
@@ -325,16 +309,9 @@ const HeroSection = () => {
 
 const NavbarWithHeroSection = () => {
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-blue-100">
+    <div className="min-h-screen bg-white font-sans selection:bg-[#ba1408]/20">
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <WorkingRoadmap />
-      <RevenueSection />
-      <StatsSection />
-      <WhyChooseSection />
-      <WorkShowcaseSection />
-      <Footer />
     </div>
   );
 }
