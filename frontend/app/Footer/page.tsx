@@ -10,7 +10,8 @@ import {
   Twitter, 
   Instagram, 
   Linkedin, 
-  ArrowUp 
+  ArrowUp,
+  ArrowUpRight
 } from 'lucide-react';
 
 const Footer = () => {
@@ -52,39 +53,11 @@ const Footer = () => {
             {/* Divider Line */}
             <div className="w-full h-px bg-gray-200 mb-10"></div>
 
-            {/* 2. Checkmarks Row */}
-            <div className="flex flex-wrap gap-8 mb-10">
-              <div className="flex items-center gap-3">
-                <div className="bg-red-700 rounded-full p-0.5">
-                  <CheckCircle2 size={14} className="text-white" strokeWidth={3} />
-                </div>
-                <span className="text-slate-900 text-base">Various analysis options.</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-red-700 rounded-full p-0.5">
-                  <CheckCircle2 size={14} className="text-white" strokeWidth={3} />
-                </div>
-                <span className="text-slate-900 text-base">Page Load (time, size, number of requests).</span>
-              </div>
-            </div>
-
-            {/* 3. App Buttons Row */}
-            <div className="flex flex-wrap gap-4">
-              {/* Google Play */}
-              <button className="bg-black hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg flex items-center gap-3 transition-colors min-w-[180px]">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                  alt="Google Play" 
-                  className="h-8 w-auto"
-                />
-              </button>
-              {/* App Store */}
-              <button className="bg-black hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg flex items-center gap-3 transition-colors min-w-[180px]">
-                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
-                  alt="App Store" 
-                  className="h-8 w-auto"
-                />
+            {/* 3. Request Quote Button */}
+            <div>
+              <button className="bg-[#ba1408] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold shadow-xl shadow-red-900/20 transition-all hover:-translate-y-1 text-sm flex items-center gap-2">
+                Request A Free Quote
+                <ArrowUpRight size={18} />
               </button>
             </div>
           </div>
@@ -193,7 +166,7 @@ const Footer = () => {
       <div className="border-t border-gray-900 bg-black text-white">
         <div className="container mx-auto px-4 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm text-center md:text-left">
-            © 2025 <span className="text-red-700">WowTheme7</span> - IT Services. All rights reserved.
+            © 2025 <span className="text-red-700">MediaFactory</span> - IT Services. All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
