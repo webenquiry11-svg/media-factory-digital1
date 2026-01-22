@@ -3,41 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // --- SVGs for the Brand Logos (Unchanged) ---
-const FigmaLogo = () => (
-  <svg width="40" height="40" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 0C29.493 0 38 8.506 38 19C38 29.494 29.493 38 19 38L19 28.5C19 23.253 23.253 19 28.5 19C33.747 19 38 14.747 38 9.5C38 4.253 33.747 0 28.5 0L19 0Z" fill="#1ABCFE"/>
-    <path d="M0 28.5C0 33.747 4.253 38 9.5 38L19 38L19 19L9.5 19C4.253 19 0 23.253 0 28.5Z" fill="#0ACF83"/>
-    <path d="M19 0L9.5 0C4.253 0 0 4.253 0 9.5C0 14.747 4.253 19 9.5 19L19 19L19 0Z" fill="#F24E1E"/>
-    <path d="M0 47.5C0 52.747 4.253 57 9.5 57C14.747 57 19 52.747 19 47.5L19 38L9.5 38C4.253 38 0 42.253 0 47.5Z" fill="#1ABCFE"/>
-    <path d="M19 38L19 47.5C19 52.747 23.253 57 28.5 57C33.747 57 38 52.747 38 47.5C38 42.253 33.747 38 28.5 38L19 38Z" fill="#A259FF"/>
-  </svg>
-);
-
-const NotionLogo = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
-    <path d="M4 4h16v16H4z" stroke="none" fill="none"/>
-    <path d="M5 5h2l.5 .5v13l-.5 .5h-2"/>
-    <path d="M8 6h1l6 9v-8h-1"/>
-    <path d="M15 15h1v-9h-1"/>
-  </svg>
-);
-
-const OpenAILogo = () => (
-  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-black">
-    <path d="M12 2L14.5 7.5L20 8.5L16 12.5L17 18L12 15.5L7 18L8 12.5L4 8.5L9.5 7.5L12 2Z" fill="none" stroke="currentColor"/>
-    <circle cx="12" cy="12" r="3" stroke="currentColor"/>
-    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
-  </svg>
-);
-
-const ColorfulCubeLogo = () => (
-  <svg width="45" height="45" viewBox="0 0 24 24" fill="none">
-    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#FF4F5E"/>
-    <path d="M2 17L12 22L22 17" stroke="none"/>
-    <path d="M2 7V17L12 22V12L2 7Z" fill="#20A0FF"/>
-    <path d="M22 7V17L12 22V12L22 7Z" fill="#FDB32A"/>
-  </svg>
-);
 
 const WhyChooseSection = () => {
   return (
@@ -50,48 +15,24 @@ const WhyChooseSection = () => {
         {/* 'lg:h-auto' lets it grow with the neighbor. 'h-[500px]' acts as fallback for mobile stacking. */}
         <div className="relative w-full lg:w-[90%] h-[500px] lg:h-auto">
             
+            {/* Animated Background Orbs */}
+            <motion.div 
+                animate={{ y: [-20, 20, -20], opacity: [0.4, 0.7, 0.4] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-12 -right-12 w-80 h-80 bg-[#ba1408]/20 rounded-full blur-3xl -z-10"
+            />
+            <motion.div 
+                animate={{ y: [20, -20, 20], opacity: [0.4, 0.7, 0.4] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-12 -left-12 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl -z-10"
+            />
+            
             {/* Image is Absolute to fill the stretched container entirely */}
             <img 
                 src="/why us.png" 
                 alt="Team working together" 
-                className="absolute inset-0 w-full h-full object-cover rounded-[3rem] grayscale-[10%]"
+                className="absolute inset-0 w-full h-full object-cover rounded-[3rem] grayscale-[10%] z-10"
             />
-            
-            {/* Floating Card: Figma (Top Left) */}
-            <motion.div 
-              animate={{ y: [0, -15, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute top-8 left-4 lg:-left-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
-            >
-                <FigmaLogo />
-            </motion.div>
-
-            {/* Floating Card: Notion (Top Right) */}
-            <motion.div 
-              animate={{ y: [0, 15, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute top-12 right-4 lg:-right-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
-            >
-                <NotionLogo />
-            </motion.div>
-
-            {/* Floating Card: OpenAI (Bottom Left) */}
-            <motion.div 
-              animate={{ x: [0, 10, 0], y: [0, -5, 0] }}
-              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 0.5 }}
-              className="absolute bottom-24 left-4 lg:-left-8 bg-white p-6 rounded-3xl shadow-2xl shadow-gray-300/50 z-20"
-            >
-                <OpenAILogo />
-            </motion.div>
-
-            {/* Floating Card: Colorful Cube (Bottom Right) */}
-            <motion.div 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 1.5 }}
-              className="absolute bottom-8 right-4 lg:-right-8 bg-white p-5 rounded-3xl shadow-xl shadow-gray-200/50 z-20"
-            >
-                <ColorfulCubeLogo />
-            </motion.div>
             
         </div>
 

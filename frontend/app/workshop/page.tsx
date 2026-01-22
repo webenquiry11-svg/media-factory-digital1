@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -12,6 +11,10 @@ import {
   Terminal, 
   Search, 
   Megaphone,
+  Palette,
+  PenTool,
+  Glasses,
+  Gamepad2
 } from 'lucide-react';
 
 const WorkingRoadmap = () => {
@@ -121,21 +124,6 @@ const WorkingRoadmap = () => {
               <button className="bg-[#ba1408] text-white px-9 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700 transition-all hover:-translate-y-1 text-sm">
                 Get Started
               </button>
-              
-              {/* Reviews */}
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-3">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-[#0B0F19] bg-gray-700 overflow-hidden relative">
-                       <Image src={`https://i.pravatar.cc/100?img=${i+20}`} alt="User" fill className="object-cover" />
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-white font-bold text-lg leading-none">2.3M+</p>
-                  <p className="text-slate-500 text-xs mt-1">5000+ Client reviews</p>
-                </div>
-              </div>
             </div>
           </motion.div>
 
@@ -188,8 +176,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">01</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Brain size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Brainstorming</span>
+                            <Megaphone size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-sm">Digital Marketing</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -202,8 +190,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">02</div>
                         <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <FileSearch size={24} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">UX Research</span>
+                            <Search size={24} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-xs text-slate-200">SEO</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -216,8 +204,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">03</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Package size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Product Designing</span>
+                            <Palette size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-sm">Graphic Designing</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -230,8 +218,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">04</div>
                         <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <Code size={24} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">Front-End Development</span>
+                            <PenTool size={24} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-xs text-slate-200">UI/UX Designing</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -244,8 +232,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">05</div>
                         <div className="w-28 h-28 lg:w-36 lg:h-36 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <ClipboardCheck size={28} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">Usability Testing</span>
+                            <Code size={28} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-xs text-slate-200">Website Development</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -258,8 +246,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">06</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#F43F5E] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19] shadow-pink-500/20">
-                            <Terminal size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Back-End Development</span>
+                            <Package size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-sm">Product Designing</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -272,8 +260,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">07</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Search size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">SEO Optimization</span>
+                            <Glasses size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-sm">AR/VR Development</span>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -286,8 +274,8 @@ const WorkingRoadmap = () => {
                     >
                         <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">08</div>
                         <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Megaphone size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Digital Marketing</span>
+                            <Gamepad2 size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className="font-semibold text-sm">Game Development</span>
                         </div>
                     </motion.div>
                 </motion.div>

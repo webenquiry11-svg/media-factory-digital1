@@ -195,24 +195,6 @@ const HeroSection = () => {
               <button className="bg-[#ba1408] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700-700 transition-all hover:-translate-y-1 text-sm cursor-none">
                 Get Started
               </button>
-              
-              {/* Client Reviews Section */}
-              <div className="hidden sm:flex items-center gap-4">
-                <div className="flex -space-x-3">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
-                       <Image src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" fill className="object-cover" />
-                    </div>
-                  ))}
-                  <div className="w-10 h-10 rounded-full border-2 border-white bg-[#0F172A] flex items-center justify-center text-white text-[10px] font-bold">
-                    +2k
-                  </div>
-                </div>
-                <div>
-                  <p className="text-[#0F172A] font-bold text-lg leading-none">2.3M+</p>
-                  <p className="text-slate-500 text-xs">5000+ Client reviews</p>
-                </div>
-              </div>
             </div>
           </div>
 

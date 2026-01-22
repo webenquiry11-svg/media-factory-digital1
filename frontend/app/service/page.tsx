@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Smartphone, Cloud } from "lucide-react";
+import { ArrowUpRight, Brush } from "lucide-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const RevenueSection = () => {
   // Animation Variants
@@ -78,9 +79,6 @@ const RevenueSection = () => {
             className="bg-[#FFF5F7] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <p className="text-[#E11D48] font-bold text-sm tracking-wide mb-3 uppercase">
-                Excellent Performance
-              </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 Digital <br /> Marketing
               </h3>
@@ -151,9 +149,6 @@ const RevenueSection = () => {
             <div className="absolute top-8 right-8 w-10 h-10 rounded-full border border-[#ba1408]/20"></div>
 
             <div className="relative z-10">
-              <p className="text-[#ba1408] font-bold text-sm tracking-wide mb-3 uppercase">
-                Excellent Performance
-              </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 Website <br /> Development
               </h3>
@@ -210,9 +205,6 @@ const RevenueSection = () => {
             className="bg-[#F8FAFC] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300 border border-slate-100"
           >
             <div className="relative z-10">
-              <p className="text-[#ba1408] font-bold text-sm tracking-wide mb-3 uppercase">
-                Excellent Performance
-              </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 SEO <br /> Optimization
               </h3>
@@ -281,9 +273,6 @@ const RevenueSection = () => {
             className="bg-[#F0FDF4] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <p className="text-[#16A34A] font-bold text-sm tracking-wide mb-3 uppercase">
-                Excellent Performance
-              </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 Logo <br /> Designing
               </h3>
@@ -304,7 +293,7 @@ const RevenueSection = () => {
                   <div className="bg-green-200 h-20 rounded-xl"></div>
                 </div>
                 <div className="absolute bottom-6 right-6 bg-[#16A34A] p-3 rounded-xl shadow-md">
-                  <Smartphone className="text-white" size={24} />
+                  <Brush className="text-white" size={24} />
                 </div>
               </div>
             </div>
@@ -316,9 +305,6 @@ const RevenueSection = () => {
             className="bg-[#FAF5FF] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <p className="text-[#9333EA] font-bold text-sm tracking-wide mb-3 uppercase">
-                Excellent Performance
-              </p>
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
                 Immersive <br /> Technology
               </h3>
@@ -337,15 +323,12 @@ const RevenueSection = () => {
                 <div className="absolute bottom-[40px] left-[20%] w-48 h-48 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                  <Cloud
-                    size={80}
-                    className="text-[#9333EA] fill-purple-100"
-                    strokeWidth={1}
-                  />
-                  <div className="mt-4 flex gap-2">
-                    <div className="w-2 h-2 bg-[#9333EA] rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-[#9333EA] rounded-full animate-bounce delay-75"></div>
-                    <div className="w-2 h-2 bg-[#9333EA] rounded-full animate-bounce delay-150"></div>
+                  <div className="w-32 h-32">
+                    <DotLottieReact
+                      src="https://lottie.host/e708f4ca-2928-4c4c-a444-d66787a72e65/A5ayUiZD7T.lottie"
+                      loop
+                      autoplay
+                    />
                   </div>
                 </div>
               </div>
