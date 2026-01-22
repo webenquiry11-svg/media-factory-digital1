@@ -13,8 +13,10 @@ import {
   ArrowUp,
   ArrowUpRight
 } from 'lucide-react';
+import { useModal } from '../service/ModalContext';
 
 const Footer = () => {
+  const { openModal } = useModal();
   return (
     <footer className="bg-white text-slate-900 font-sans overflow-hidden">
       
@@ -55,7 +57,7 @@ const Footer = () => {
 
             {/* 3. Request Quote Button */}
             <div>
-              <button className="bg-[#ba1408] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold shadow-xl shadow-red-900/20 transition-all hover:-translate-y-1 text-sm flex items-center gap-2">
+              <button onClick={openModal} className="bg-[#ba1408] hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold shadow-xl shadow-red-900/20 transition-all hover:-translate-y-1 text-sm flex items-center gap-2">
                 Request A Free Quote
                 <ArrowUpRight size={18} />
               </button>
