@@ -80,7 +80,7 @@ const RevenueSection = () => {
           >
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
-                Digital <br /> Marketing
+                Data-Driven <br /> Growth
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 cursor-pointer">
@@ -150,7 +150,7 @@ const RevenueSection = () => {
 
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
-                Website <br /> Development
+                Next-Gen <br /> Web Solutions
               </h3>
 
               <button className="w-14 h-14 bg-[#ba1408] rounded-full flex items-center justify-center shadow-lg shadow-[#ba1408]/30 group-hover:scale-110 transition-transform duration-300 cursor-pointer">
@@ -206,7 +206,7 @@ const RevenueSection = () => {
           >
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
-                SEO <br /> Optimization
+                Dominate <br /> Search Results
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm border border-slate-100 group-hover:scale-110 transition-transform duration-300 cursor-pointer">
@@ -274,7 +274,7 @@ const RevenueSection = () => {
           >
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
-                Logo <br /> Designing
+                Strategic <br /> Brand Identity
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 cursor-pointer">
@@ -306,7 +306,7 @@ const RevenueSection = () => {
           >
             <div className="relative z-10">
               <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
-                Immersive <br /> Technology
+                The Future <br /> of Experience
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 cursor-pointer">
