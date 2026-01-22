@@ -16,6 +16,7 @@ import {
   Glasses,
   Gamepad2
 } from 'lucide-react';
+import { useModal } from '../service/ModalContext';
 
 const WorkingRoadmap = () => {
   // Animation Variants
@@ -48,6 +49,8 @@ const WorkingRoadmap = () => {
       transition: { duration: 0.6, ease: "easeOut" as const }
     }
   };
+
+  const { openModal } = useModal();
 
   return (
     // Updated Section Styles: Added mx-4 (margin x-axis) and rounded-[3rem] (border-radius)
@@ -121,7 +124,10 @@ const WorkingRoadmap = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-              <button className="bg-[#ba1408] text-white px-9 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700 transition-all hover:-translate-y-1 text-sm">
+              <button 
+                onClick={openModal}
+                className="bg-[#ba1408] text-white px-9 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700 transition-all hover:-translate-y-1 text-sm"
+              >
                 Get Started
               </button>
             </div>

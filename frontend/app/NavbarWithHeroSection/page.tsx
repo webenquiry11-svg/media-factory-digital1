@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -21,12 +22,14 @@ import {
   Send,
   Triangle,
   Square,
-  LayoutGrid
+  LayoutGrid,
+  ArrowRight
 } from 'lucide-react';
+import { useModal } from '../service/ModalContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const { openModal } = useModal();
 
   return (
     <>
@@ -51,44 +54,19 @@ const Navbar = () => {
           {/* CTA Button */}
           <div 
             className="hidden lg:flex items-center gap-4 relative"
-            onMouseEnter={() => setIsFormVisible(true)}
-            onMouseLeave={() => setIsFormVisible(false)}
           >
-            <button 
-              className="bg-[#0F172A] text-white px-8 py-4 rounded-full text-base font-bold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl cursor-pointer"
+            <motion.button 
+              onClick={openModal}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative group px-8 py-4 rounded-full bg-gradient-to-r from-[#ba1408] to-[#d91f12] text-white font-bold shadow-[0_10px_20px_-10px_rgba(186,20,8,0.5)] hover:shadow-[0_20px_30px_-10px_rgba(186,20,8,0.6)] transition-all duration-300 overflow-hidden"
             >
-              Contact Now
-            </button>
-
-            {/* Contact Form Dropdown */}
-            {isFormVisible && (
-              <div className="absolute top-full right-0 mt-2 w-96 bg-slate-900 rounded-2xl shadow-2xl border border-slate-700 z-50 origin-top-right animate-in fade-in-0 zoom-in-95 overflow-hidden">
-                <div className="p-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white">Contact Us</h3>
-                    <p className="text-sm text-slate-400 mt-1">Let's start a conversation</p>
-                  </div>
-
-                  <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-                    <div className="relative">
-                      <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                      <input type="text" placeholder="Full Name" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300" />
-                    </div>
-                    <div className="relative">
-                      <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-                      <input type="email" placeholder="Email Address" className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300" />
-                    </div>
-                    <div className="relative">
-                      <MessageSquare size={16} className="absolute left-4 top-4 text-slate-400" />
-                      <textarea placeholder="Your Message..." rows={4} className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#ba1408] focus:ring-1 focus:ring-[#ba1408] transition-all duration-300 resize-none" />
-                    </div>
-                    <button type="submit" className="w-full bg-gradient-to-r from-[#ba1408] to-[#ba1408] text-white py-3 rounded-lg font-bold transition-all duration-300 mt-2 shadow-[0_0_15px_rgba(186,20,8,0.5)] hover:shadow-[0_0_25px_rgba(186,20,8,0.8)] hover:scale-105">
-                      Send Message
-                    </button>
-                  </form>
-                </div>
-              </div>
-            )}
+              <span className="relative z-10 flex items-center gap-2">
+                <span>Contact Now</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />
+            </motion.button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -117,6 +95,7 @@ const HeroSection = () => {
   // State for Custom Cursor
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [showCursor, setShowCursor] = useState(false);
+  const { openModal } = useModal();
 
   return (
     <section 
@@ -192,7 +171,7 @@ const HeroSection = () => {
             
             <div className="flex items-center gap-8 mb-10">
               {/* Added cursor-pointer to buttons so the custom cursor still indicates clickability implicitly or we can override */}
-              <button className="bg-[#ba1408] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700-700 transition-all hover:-translate-y-1 text-sm cursor-none">
+              <button onClick={openModal} className="bg-[#ba1408] text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-[#ba1408]/30 hover:bg-red-700-700 transition-all hover:-translate-y-1 text-sm cursor-none">
                 Get Started
               </button>
             </div>

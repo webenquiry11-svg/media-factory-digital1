@@ -6,6 +6,7 @@ import StatsSection from './statsSection/page';
 import WorkingRoadmap from './workshop/page';
 import AboutSection from './AboutUs/page';
 import Footer from './Footer/page';
+import ContactModal from './service/ContactModal';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       {/* Wrapper for Navbar/Hero to ensure it stays on top of other content's z-indexes */}
       <div className="relative z-50">
         <NavbarWithHeroSection />
+        <ContactModal />
       </div>
       
       {/* Wrapper for content sections to establish a lower stacking context */}
