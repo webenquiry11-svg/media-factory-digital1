@@ -249,21 +249,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* --- Bottom Logo Slider --- */}
-      <div className="w-full border-t border-gray-100/50 bg-white/50 backdrop-blur-sm pt-8 pb-10 z-20 overflow-hidden mt-auto">
-        <div className="animate-marquee">
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex-shrink-0 flex items-center justify-around min-w-full gap-16 md:gap-32 px-8">
-              <div className="flex items-center gap-3 shrink-0 group cursor-none"><div className="w-7 h-7 bg-[#5F3DC4] text-white flex items-center justify-center rounded-md font-serif font-bold text-sm">C</div><span className="text-xl font-bold text-slate-800 group-hover:text-[#5F3DC4] transition-colors">customer.io</span></div>
-              <div className="flex items-center gap-2 shrink-0 group cursor-none"><div className="w-7 h-7 bg-[#FF3366] rounded-full flex items-center justify-center"><span className="text-white font-bold text-xs">in</span></div><span className="text-xl font-bold text-slate-800 group-hover:text-[#FF3366] transition-colors">invision</span></div>
-              <div className="flex items-center gap-2 shrink-0 group cursor-none"><Triangle size={24} className="text-[#FBBD08] fill-[#FBBD08]" /><span className="text-xl font-bold text-slate-800 group-hover:text-[#FBBD08] transition-colors">Airtable</span></div>
-              <div className="flex items-center gap-1 shrink-0 group cursor-none"><div className="flex gap-0.5"><div className="w-2 h-2 rounded-full bg-[#FF5B5B]"></div><div className="w-2 h-2 rounded-full bg-[#FFC400]"></div><div className="w-2 h-2 rounded-full bg-[#00D084]"></div></div><span className="text-xl font-bold text-slate-800 ml-1 group-hover:text-slate-900 transition-colors">monday<span className="font-normal text-slate-500">.com</span></span></div>
-              <div className="flex items-center gap-2 shrink-0 group cursor-none"><Square size={20} className="text-[#FF4D79] fill-[#FF4D79] rounded-sm" /><span className="text-xl font-bold text-slate-800 group-hover:text-[#FF4D79] transition-colors">pendo</span></div>
-              <div className="flex items-center gap-2 shrink-0 group cursor-none"><LayoutGrid size={24} className="text-[#FF9F1C] fill-[#FF9F1C]" /><span className="text-xl font-bold text-slate-800 group-hover:text-[#FF9F1C] transition-colors">productboard</span></div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };

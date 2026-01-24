@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   FileSearch, 
@@ -14,11 +14,14 @@ import {
   Palette,
   PenTool,
   Glasses,
-  Gamepad2
+  Gamepad2,
+  ArrowRight,
+  X
 } from 'lucide-react';
 import { useModal } from '../service/ModalContext';
 
 const WorkingRoadmap = () => {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -51,6 +54,113 @@ const WorkingRoadmap = () => {
   };
 
   const { openModal } = useModal();
+
+  const servicesData = [
+    {
+      id: '01',
+      title: 'Digital Marketing',
+      icon: Megaphone,
+      bgColor: 'bg-[#ba1408]',
+      borderClass: 'border-4 border-[#0B0F19]',
+      textClass: 'font-semibold text-sm text-white',
+      shadowClass: 'shadow-2xl',
+      positionClass: 'md:translate-y-8',
+      floatDuration: 4,
+      floatDelay: 0,
+      description: "Maximize your reach with targeted strategies across social media, SEO, and PPC campaigns designed to convert visitors into loyal customers."
+    },
+    {
+      id: '02',
+      title: 'SEO',
+      icon: Search,
+      bgColor: 'bg-[#1E293B]',
+      borderClass: 'border border-slate-700/50',
+      textClass: 'font-semibold text-xs text-slate-200',
+      shadowClass: 'shadow-xl',
+      positionClass: 'md:-translate-y-12',
+      floatDuration: 5,
+      floatDelay: 0.5,
+      description: "Climb search rankings and drive organic traffic with technical SEO, keyword optimization, and content strategy tailored to your niche."
+    },
+    {
+      id: '03',
+      title: 'Graphic Designing',
+      icon: Palette,
+      bgColor: 'bg-[#ba1408]',
+      borderClass: 'border-4 border-[#0B0F19]',
+      textClass: 'font-semibold text-sm text-white',
+      shadowClass: 'shadow-2xl',
+      positionClass: 'md:translate-y-4',
+      floatDuration: 4.5,
+      floatDelay: 0.2,
+      description: "Visual storytelling that captivates. From logos to branding materials, we create designs that leave a lasting impression on your audience."
+    },
+    {
+      id: '04',
+      title: 'UI/UX Designing',
+      icon: PenTool,
+      bgColor: 'bg-[#ba1408]',
+      borderClass: 'border border-slate-700/50',
+      textClass: 'font-semibold text-xs text-slate-200',
+      shadowClass: 'shadow-xl',
+      positionClass: 'md:-translate-y-16',
+      floatDuration: 5.2,
+      floatDelay: 0.7,
+      description: "User-centric interfaces that are intuitive and engaging. We design experiences that users love to interact with, reducing friction and boosting retention."
+    },
+    {
+      id: '05',
+      title: 'Website Development',
+      icon: Code,
+      bgColor: 'bg-[#1E293B]',
+      borderClass: 'border border-slate-700/50',
+      textClass: 'font-semibold text-xs text-slate-200',
+      shadowClass: 'shadow-xl',
+      positionClass: 'md:translate-y-4',
+      floatDuration: 4.8,
+      floatDelay: 0.3,
+      description: "Robust, scalable, and secure websites built with modern technologies to drive your business growth online and ensure 99.9% uptime."
+    },
+    {
+      id: '06',
+      title: 'Product Designing',
+      icon: Package,
+      bgColor: 'bg-[#F43F5E]',
+      borderClass: 'border-4 border-[#0B0F19] shadow-pink-500/20',
+      textClass: 'font-semibold text-sm text-white',
+      shadowClass: 'shadow-2xl',
+      positionClass: 'md:-translate-y-8',
+      floatDuration: 4.2,
+      floatDelay: 0.1,
+      description: "From concept to prototype, we help you design innovative products that solve real-world problems and stand out in the market."
+    },
+    {
+      id: '07',
+      title: 'AR/VR Development',
+      icon: Glasses,
+      bgColor: 'bg-[#ba1408]',
+      borderClass: 'border-4 border-[#0B0F19]',
+      textClass: 'font-semibold text-sm text-white',
+      shadowClass: 'shadow-2xl',
+      positionClass: 'md:translate-y-12',
+      floatDuration: 5.5,
+      floatDelay: 0.6,
+      description: "Immersive augmented and virtual reality experiences that bridge the gap between the digital and physical worlds for training, gaming, or retail."
+    },
+    {
+      id: '08',
+      title: 'Game Development',
+      icon: Gamepad2,
+      bgColor: 'bg-[#ba1408]',
+      borderClass: 'border-4 border-[#0B0F19]',
+      textClass: 'font-semibold text-sm text-white',
+      shadowClass: 'shadow-2xl',
+      positionClass: 'md:-translate-y-4',
+      floatDuration: 4.6,
+      floatDelay: 0.4,
+      description: "Engaging and high-performance games for mobile and web, built with passion and cutting-edge engines to entertain millions."
+    }
+  ];
 
   return (
     // Updated Section Styles: Added mx-4 (margin x-axis) and rounded-[3rem] (border-radius)
@@ -173,118 +283,47 @@ const WorkingRoadmap = () => {
                         viewport={{ once: true }}
                     />
                 </svg>
-
-                {/* 01 Brainstorming (Blue, Large) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:translate-y-8">
+                
+                {/* Mapped Services Bubbles */}
+                {servicesData.map((service) => (
+                  <motion.div 
+                    key={service.id}
+                    variants={bubbleVariants} 
+                    className={`flex flex-col items-center relative group cursor-pointer ${service.positionClass} ${selectedService === service.id ? 'z-50' : 'z-10'}`}
+                    onMouseEnter={() => setSelectedService(service.id)}
+                    onMouseLeave={() => setSelectedService(null)}
+                  >
                     <motion.div 
-                        animate={{ y: [0, -8, 0] }} 
-                        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                        animate={{ y: selectedService === service.id ? 0 : [0, -8, 0] }} 
+                        transition={{ y: { repeat: Infinity, duration: service.floatDuration, ease: "easeInOut", delay: service.floatDelay } }}
+                        className={`transition-opacity duration-300 ${selectedService === service.id ? 'opacity-0' : 'opacity-100'}`}
                     >
-                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">01</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Megaphone size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Digital Marketing</span>
+                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">{service.id}</div>
+                        <div className={`w-32 h-32 lg:w-40 lg:h-40 ${service.bgColor} rounded-full flex flex-col items-center justify-center text-center p-4 ${service.shadowClass} transition-transform z-10 ${service.borderClass}`}>
+                            <service.icon size={32} className="text-white mb-2" strokeWidth={1.5} />
+                            <span className={service.textClass}>{service.title}</span>
                         </div>
                     </motion.div>
-                </motion.div>
 
-                {/* 02 UX Research (Dark, Medium, High) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:-translate-y-12">
-                    <motion.div 
-                        animate={{ y: [0, -10, 0] }} 
-                        transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
-                    >
-                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">02</div>
-                        <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <Search size={24} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">SEO</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 03 Product Designing (Teal, Large) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:translate-y-4">
-                    <motion.div 
-                        animate={{ y: [0, -6, 0] }} 
-                        transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.2 }}
-                    >
-                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">03</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Palette size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Graphic Designing</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 04 Front-End (Dark, Medium, High) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:-translate-y-16">
-                    <motion.div 
-                        animate={{ y: [0, -9, 0] }} 
-                        transition={{ repeat: Infinity, duration: 5.2, ease: "easeInOut", delay: 0.7 }}
-                    >
-                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">04</div>
-                        <div className="w-28 h-28 lg:w-32 lg:h-32 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <PenTool size={24} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">UI/UX Designing</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 05 Usability Testing (Dark, Medium, Low) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:translate-y-4">
-                    <motion.div 
-                        animate={{ y: [0, -7, 0] }} 
-                        transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.3 }}
-                    >
-                        <div className="absolute -top-1 left-2 bg-[#ba1408] text-white text-[10px] font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">05</div>
-                        <div className="w-28 h-28 lg:w-36 lg:h-36 bg-[#1E293B] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl hover:scale-105 transition-transform border border-slate-700/50">
-                            <Code size={28} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-xs text-slate-200">Website Development</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 06 Back-End (Pink, Large) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:-translate-y-8">
-                    <motion.div 
-                        animate={{ y: [0, -10, 0] }} 
-                        transition={{ repeat: Infinity, duration: 4.2, ease: "easeInOut", delay: 0.1 }}
-                    >
-                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">06</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#F43F5E] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19] shadow-pink-500/20">
-                            <Package size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Product Designing</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 07 SEO (Blue, Large, Low) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:translate-y-12">
-                    <motion.div 
-                        animate={{ y: [0, -5, 0] }} 
-                        transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.6 }}
-                    >
-                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">07</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Glasses size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">AR/VR Development</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                {/* 08 Digital Marketing (Teal, Large, High) */}
-                <motion.div variants={bubbleVariants} className="flex flex-col items-center relative group md:-translate-y-4">
-                    <motion.div 
-                        animate={{ y: [0, -8, 0] }} 
-                        transition={{ repeat: Infinity, duration: 4.6, ease: "easeInOut", delay: 0.4 }}
-                    >
-                        <div className="absolute -top-2 -left-2 bg-[#ba1408] text-white text-[10px] font-bold w-7 h-7 flex items-center justify-center rounded-full border-2 border-[#0B0F19] z-20 shadow-lg">08</div>
-                        <div className="w-32 h-32 lg:w-40 lg:h-40 bg-[#ba1408] rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl hover:scale-105 transition-transform z-10 border-4 border-[#0B0F19]">
-                            <Gamepad2 size={32} className="text-white mb-2" strokeWidth={1.5} />
-                            <span className="font-semibold text-sm">Game Development</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
+                    <AnimatePresence>
+                      {selectedService === service.id && (
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.5, rotateX: 90 }}
+                          animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+                          exit={{ opacity: 0, scale: 0.5, rotateX: 90 }}
+                          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 p-6 rounded-2xl shadow-2xl flex flex-col items-center text-center ${service.bgColor} border-2 border-white/20`}
+                        >
+                          <service.icon size={28} className="text-white mb-3" />
+                          <h4 className="text-white font-bold text-sm mb-2">{service.title}</h4>
+                          <p className="text-white/90 text-xs leading-relaxed font-medium">
+                            {service.description}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
 
              </motion.div>
           </div>

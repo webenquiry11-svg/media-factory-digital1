@@ -81,7 +81,7 @@ const WorkShowcaseSection = () => {
       id: 5,
       category: 'Excellent Performance',
       title: 'AR/VR/XR Experiences',
-      image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop', 
+      image: '/arvr.png', 
       bgColor: 'bg-gray-100',
       overlayColor: ''
     }
@@ -111,18 +111,21 @@ const WorkShowcaseSection = () => {
                 <div className="group cursor-pointer">
                   
                   {/* Card Container - Square Aspect Ratio */}
-                  <div className={`relative rounded-[2rem] overflow-hidden aspect-square w-full ${item.bgColor} transition-all duration-300 hover:-translate-y-2`}>
+                  <div className={`relative rounded-[2rem] overflow-hidden aspect-square w-full ${item.bgColor} transition-all duration-500 ease-out hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-2`}>
                     
                     {/* Image */}
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${item.overlayColor}`}
+                      className={`w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 ${item.overlayColor}`}
                     />
 
+                    {/* Gradient Overlay on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                     {/* Floating Arrow Button (Top Right) */}
-                    <div className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110 z-10">
-                      <ArrowUpRight className="text-black w-5 h-5" strokeWidth={2.5} />
+                    <div className="absolute top-6 right-6 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:bg-[#ba1408] group-hover:text-white group-hover:rotate-45 group-hover:scale-110 z-10">
+                      <ArrowUpRight className="w-5 h-5 transition-colors duration-300" strokeWidth={2.5} />
                     </div>
 
                     {/* Decorative Elements (Optional circles visible in design) */}
