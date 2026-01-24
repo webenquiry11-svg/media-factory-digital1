@@ -37,8 +37,11 @@ const WorkShowcaseSection = () => {
         breakpoint: 640, // Mobile
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '20px',
+          centerPadding: '24px',
+          arrows: false,
+          dots: true
         }
       }
     ]
@@ -88,23 +91,23 @@ const WorkShowcaseSection = () => {
   ];
 
   return (
-    <div id="portfolio" className="bg-gray-50 py-20 min-h-screen font-sans flex flex-col justify-center">
+    <div id="portfolio" className="bg-gray-50 py-12 lg:py-20 min-h-0 lg:min-h-screen font-sans flex flex-col justify-center">
       <div className="w-full px-4 lg:px-8">
         
         {/* Header Section */}
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-10 lg:mb-16 space-y-4">
           <div className="inline-block px-5 py-2 rounded-full bg-white border border-gray-200 shadow-sm">
             <span className="text-[#ba1408] text-sm font-bold tracking-wide">Portfolio Highlights</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Digital Excellence<br />
             Delivered Impact & Innovation
           </h2>
         </div>
 
         {/* Carousel Section */}
-        <div className="slider-wrapper">
+        <div className="slider-wrapper py-12 -my-12">
           <Slider {...settings}>
             {showcaseData.map((item) => (
               <div key={item.id} className="px-3 outline-none">
@@ -152,8 +155,12 @@ const WorkShowcaseSection = () => {
       <style jsx global>{`
         /* Remove default slick padding issues */
         .slider-wrapper .slick-list {
-          margin: 0 -12px;
           overflow: visible; /* Allows shadows/hover effects to not be clipped */
+        }
+        @media (min-width: 640px) {
+          .slider-wrapper .slick-list {
+            margin: 0 -12px;
+          }
         }
         .slider-wrapper {
           overflow: hidden; /* Hides the overflow from visible list above */

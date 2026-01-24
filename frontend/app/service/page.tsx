@@ -41,7 +41,7 @@ const RevenueSection = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* --- Header Section --- */}
         <motion.div
-          className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8"
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-6 lg:gap-8"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
@@ -51,7 +51,7 @@ const RevenueSection = () => {
             <span className="bg-[#ba1408]/10 text-[#ba1408] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
               What We Offering
             </span>
-            <h2 className="text-4xl lg:text-[3.5rem] font-bold text-[#0F172A] leading-[1.15]">
+            <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-bold text-[#0F172A] leading-[1.15]">
               Provides Full-Cycle Custom
               <br className="hidden lg:block" />
               Digital Services
@@ -76,10 +76,10 @@ const RevenueSection = () => {
           {/* 1. IT Management (Top Left) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#FFF5F7] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="bg-[#FFF5F7] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
                 Data-Driven <br /> Growth
               </h3>
 
@@ -144,12 +144,12 @@ const RevenueSection = () => {
           {/* 2. Website Design (Center - Spans 2 Rows) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#ba1408]/5 rounded-[2.5rem] p-10 flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 lg:row-span-2 h-auto min-h-[520px]"
+            className="bg-[#ba1408]/5 rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300 lg:row-span-2 h-auto min-h-[450px] lg:min-h-[520px]"
           >
             <div className="absolute top-8 right-8 w-10 h-10 rounded-full border border-[#ba1408]/20"></div>
 
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
                 Next-Gen <br /> Web Solutions
               </h3>
 
@@ -159,7 +159,7 @@ const RevenueSection = () => {
             </div>
 
             {/* Expanded Tech Graphic */}
-            <div className="relative w-full h-full flex-grow mt-12 min-h-[600px]">
+            <div className="relative w-full h-full flex-grow mt-8 lg:mt-12 min-h-[300px] lg:min-h-[600px]">
               {/* Floating Logos */}
               <div className="absolute top-0 left-4 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center z-20 animate-bounce-slow border border-slate-100">
                 <span className="font-bold text-yellow-500 text-sm">JS</span>
@@ -202,10 +202,10 @@ const RevenueSection = () => {
           {/* 3. CRM Software (Top Right) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#F8FAFC] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300 border border-slate-100"
+            className="bg-[#F8FAFC] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300 border border-slate-100"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
                 Dominate <br /> Search Results
               </h3>
 
@@ -270,10 +270,10 @@ const RevenueSection = () => {
           {/* 4. Mobile App Dev (Bottom Left) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#F0FDF4] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="bg-[#F0FDF4] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
                 Strategic <br /> Brand Identity
               </h3>
 
@@ -302,10 +302,10 @@ const RevenueSection = () => {
           {/* 5. Cloud Solutions (Bottom Right) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#FAF5FF] rounded-[2.5rem] p-10 flex flex-col justify-between h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="bg-[#FAF5FF] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-[#0F172A] leading-tight mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
                 The Future <br /> of Experience
               </h3>
 

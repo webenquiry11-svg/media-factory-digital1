@@ -39,7 +39,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="MediaFactory Logo" width={240} height={240} className="object-contain" />
+            <Image src="/logo.png" alt="MediaFactory Logo" width={240} height={240} className="object-contain w-40 sm:w-48 lg:w-60" />
           </div>
 
           {/* Desktop Menu */}
@@ -199,7 +199,7 @@ const HeroSection = () => {
   return (
     <section 
       ref={containerRef}
-      className="relative bg-[#F8F9FF] overflow-hidden min-h-[calc(100vh-130px)] cursor-none flex flex-col"
+      className="relative bg-[#F8F9FF] overflow-hidden min-h-[calc(100vh-130px)] lg:cursor-none flex flex-col"
       onMouseMove={(e) => {
         setMousePos({ x: e.clientX, y: e.clientY });
         if (containerRef.current) {
@@ -216,7 +216,7 @@ const HeroSection = () => {
       
       {/* --- Custom Cursor Element --- */}
       <div 
-        className={`fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-opacity duration-150 ${showCursor ? 'opacity-100' : 'opacity-0'}`}
+        className={`hidden lg:flex fixed z-[9999] pointer-events-none -translate-x-1/2 -translate-y-1/2 items-center justify-center transition-opacity duration-150 ${showCursor ? 'opacity-100' : 'opacity-0'}`}
         style={{ left: mousePos.x, top: mousePos.y }}
       >
          <div className="w-10 h-10 border border-slate-900 rounded-full flex items-center justify-center bg-transparent backdrop-blur-[1px]">
@@ -261,11 +261,11 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-16 pb-12 lg:pb-8 flex-grow">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
           
           {/* --- Left Content --- */}
           <div className="max-w-2xl relative z-20">
-            <h1 className="text-6xl lg:text-[5rem] text-[#0F172A] leading-[1.1] mb-8 tracking-tight font-sans cursor-text">
+            <h1 className="text-4xl sm:text-5xl lg:text-[5rem] text-[#0F172A] leading-[1.1] mb-6 lg:mb-8 tracking-tight font-sans cursor-text">
               <span className="font-[700]">Elevate Your Business</span> <br />
               <span className="font-[700]">With Strategic</span> <br />
               <span className="font-[700]">IT Solutions</span>
@@ -287,10 +287,10 @@ const HeroSection = () => {
           <div className="relative mt-12 lg:mt-0 flex justify-center lg:justify-end lg:right-12">
             
             {/* Main White Card Container */}
-            <div className="relative w-[340px] h-[440px] lg:w-[420px] lg:h-[520px] bg-white rounded-[3rem] shadow-2xl flex items-end justify-center overflow-visible z-10">
+            <div className="relative w-[280px] h-[380px] sm:w-[340px] sm:h-[440px] lg:w-[420px] lg:h-[520px] bg-white rounded-[2rem] sm:rounded-[3rem] shadow-2xl flex items-end justify-center overflow-visible z-10">
                
                {/* 2. The Person Image */}
-               <div className="relative w-full h-[90%] rounded-b-[3rem] overflow-hidden">
+               <div className="relative w-full h-[90%] rounded-b-[2rem] sm:rounded-b-[3rem] overflow-hidden">
                  <Image 
                    src="/hero img.png" 
                    alt="Business Professional"
@@ -300,7 +300,7 @@ const HeroSection = () => {
                </div>
 
                {/* 3. Floating Trustpilot Badge (Top Right) */}
-               <div className="absolute top-8 -right-10 bg-white py-3 px-5 rounded-2xl shadow-lg border border-slate-50 animate-bounce-slow z-20 flex items-center gap-4 min-w-[180px]">
+               <div className="absolute top-4 -right-4 sm:top-8 sm:-right-10 bg-white py-2 px-3 sm:py-3 sm:px-5 rounded-xl sm:rounded-2xl shadow-lg border border-slate-50 animate-bounce-slow z-20 flex items-center gap-2 sm:gap-4 min-w-[140px] sm:min-w-[180px]">
                   <div>
                     <div className="flex gap-0.5 mb-1">
                         {[1,2,3,4,5].map(i => (
@@ -318,7 +318,7 @@ const HeroSection = () => {
                </div>
 
                {/* 4. Floating "Revenue" Card (Bottom Left) */}
-               <div className="absolute bottom-8 -left-12 bg-white/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white z-30 w-52">
+               <div className="absolute bottom-6 -left-4 sm:bottom-8 sm:-left-12 bg-white/90 backdrop-blur-sm p-3 sm:p-5 rounded-xl sm:rounded-2xl shadow-xl border border-white z-30 w-40 sm:w-52">
                   <p className="text-slate-400 text-[10px] uppercase tracking-wider font-semibold mb-1">Revenue</p>
                   <p className="text-[#0F172A] text-2xl font-bold mb-3">$4820.00</p>
                   {/* Chart Graphic */}
@@ -332,8 +332,8 @@ const HeroSection = () => {
                </div>
 
                {/* 5. Floating "Experience" Badge (Bottom Right) */}
-               <div className="absolute -bottom-8 -right-8 bg-[#ba1408] text-white p-6 rounded-tl-[2rem] rounded-tr-[1rem] rounded-bl-[1rem] rounded-br-[2rem] shadow-2xl z-30 flex flex-col items-center justify-center w-36 h-36">
-                  <span className="text-5xl font-bold">8+</span>
+               <div className="absolute -bottom-4 -right-4 sm:-bottom-8 sm:-right-8 bg-[#ba1408] text-white p-4 sm:p-6 rounded-tl-[1.5rem] sm:rounded-tl-[2rem] rounded-tr-[0.75rem] sm:rounded-tr-[1rem] rounded-bl-[0.75rem] sm:rounded-bl-[1rem] rounded-br-[1.5rem] sm:rounded-br-[2rem] shadow-2xl z-30 flex flex-col items-center justify-center w-24 h-24 sm:w-36 sm:h-36">
+                  <span className="text-3xl sm:text-5xl font-bold">8+</span>
                   <span className="text-[11px] font-medium text-red-100 mt-1">Years Experience</span>
                   <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
                     <ArrowUp size={18} className="text-[#ba1408] rotate-45" />

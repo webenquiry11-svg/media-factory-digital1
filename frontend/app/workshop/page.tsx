@@ -262,7 +262,7 @@ const WorkingRoadmap = () => {
 
              {/* Animated Grid Container */}
              <motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-16 relative"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 md:gap-y-16 relative"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"

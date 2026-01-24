@@ -75,7 +75,7 @@ const Page = () => {
           </div>
 
           {/* Floating Card 1: Balance (Top Right) */}
-          <div className="absolute -top-6 -right-4 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
+          <div className="absolute -top-6 -right-0 sm:-right-4 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
             <div className="bg-gray-50 p-2 rounded-full">
               <div className="w-6 h-6 rounded-full bg-red-500 overflow-hidden relative">
                  {/* CSS Flag Simulation */}
@@ -92,7 +92,7 @@ const Page = () => {
           </div>
 
           {/* Floating Card 2: Usability Testing (Bottom Left) */}
-          <div className="absolute bottom-8 -left-8 bg-white p-5 rounded-2xl shadow-xl w-48 z-20">
+          <div className="absolute bottom-8 -left-2 sm:-left-8 bg-white p-5 rounded-2xl shadow-xl w-48 z-20">
             <div className="flex justify-between items-start mb-4">
               <div className="bg-[#ba1408]/10 p-1.5 rounded-lg">
                 <BarChart3 className="w-5 h-5 text-red-700" />
@@ -114,7 +114,7 @@ const Page = () => {
           </div>
 
           {/* Floating Card 3: Pie Chart (Bottom Right) */}
-          <div className="absolute -bottom-6 right-8 bg-white p-4 rounded-2xl shadow-xl z-20 w-40">
+          <div className="absolute -bottom-6 right-2 sm:right-8 bg-white p-4 rounded-2xl shadow-xl z-20 w-40">
             <p className="text-xs font-semibold text-gray-800 mb-2">Your Pie Chart</p>
             <div className="flex items-center gap-4">
               {/* CSS Pie Chart */}
