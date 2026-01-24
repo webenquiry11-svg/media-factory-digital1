@@ -289,6 +289,12 @@ const WorkingRoadmap = () => {
                   <motion.div 
                     key={service.id}
                     variants={bubbleVariants} 
+                    drag
+                    dragSnapToOrigin
+                    dragElastic={0.2}
+                    whileHover={{ scale: 1.05 }}
+                    whileDrag={{ scale: 1.1, cursor: 'grabbing' }}
+                    whileTap={{ scale: 0.95 }}
                     className={`flex flex-col items-center relative group cursor-pointer ${service.positionClass} ${selectedService === service.id ? 'z-50' : 'z-10'}`}
                     onMouseEnter={() => setSelectedService(service.id)}
                     onMouseLeave={() => setSelectedService(null)}
