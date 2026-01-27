@@ -142,18 +142,18 @@ const Footer = () => {
               <div className="flex gap-3 mb-8">
                 <MapPin className="text-red-700 shrink-0 mt-0.5" size={18} />
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  55 Main Street, 2nd block Malborne,<br /> Australia
+                  Ludhiana, Punjab, 141001
                 </p>
               </div>
 
               <h3 className="text-lg font-medium text-white mb-4">Contact</h3>
               <div className="space-y-3">
-                 <a href="mailto:support@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors block">
-                   support@gmail.com
+                 <a href="mailto:info@mediafactory.in" className="text-gray-400 text-sm hover:text-white transition-colors block">
+                   info@mediafactory.in
                  </a>
                  <div className="flex items-center gap-3 text-white">
                    <Phone className="text-red-700" size={18} />
-                   <span className="text-lg font-normal">+880 (123) 456 88</span>
+                   <span className="text-lg font-normal">9814746565</span>
                  </div>
               </div>
             </div>

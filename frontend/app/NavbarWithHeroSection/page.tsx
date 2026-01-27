@@ -23,7 +23,9 @@ import {
   Triangle,
   Square,
   LayoutGrid,
-  ArrowRight
+  ArrowRight,
+  Users,
+  TrendingUp
 } from 'lucide-react';
 import { useModal } from '../service/ModalContext';
 
@@ -299,35 +301,28 @@ const HeroSection = () => {
                  />
                </div>
 
-               {/* 3. Floating Trustpilot Badge (Top Right) */}
-               <div className="absolute top-4 -right-4 sm:top-8 sm:-right-10 bg-white py-2 px-3 sm:py-3 sm:px-5 rounded-xl sm:rounded-2xl shadow-lg border border-slate-50 animate-bounce-slow z-20 flex items-center gap-2 sm:gap-4 min-w-[140px] sm:min-w-[180px]">
+               {/* 3. Floating Client Retention Badge (Top Right) */}
+               <div className="absolute top-4 -right-4 sm:top-8 sm:-right-10 bg-white py-3 px-4 sm:py-4 sm:px-6 rounded-xl sm:rounded-2xl shadow-lg border border-slate-50 animate-bounce-slow z-20 flex items-center gap-3 sm:gap-4 min-w-[160px] sm:min-w-[200px]">
+                  <div className="bg-blue-50 p-2.5 rounded-full">
+                    <Users size={20} className="text-blue-600" />
+                  </div>
                   <div>
-                    <div className="flex gap-0.5 mb-1">
-                        {[1,2,3,4,5].map(i => (
-                        <div key={i} className="bg-[#00B67A] p-0.5 rounded-[1px]">
-                            <Star size={8} className="text-white fill-white" />
-                        </div>
-                        ))}
-                    </div>
-                    <span className="text-[#0F172A] font-bold text-sm">Trust pilot</span>
+                    <p className="text-xs text-slate-400 font-medium mb-0.5">Client Retention</p>
+                    <p className="text-[#0F172A] font-bold text-xl">92%</p>
                   </div>
-                  <div className="bg-[#ba1408]/10 p-1 rounded-full ml-auto">
-                      <CheckCircle size={16} className="text-[#ba1408] fill-[#ba1408] text-white" />
-                  </div>
-                  <div className="absolute -top-3 -right-2 bg-[#00B67A] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">4.9 ★</div>
                </div>
 
-               {/* 4. Floating "Revenue" Card (Bottom Left) */}
+               {/* 4. Floating "ROI" Card (Bottom Left) */}
                <div className="absolute bottom-6 -left-4 sm:bottom-8 sm:-left-12 bg-white/90 backdrop-blur-sm p-3 sm:p-5 rounded-xl sm:rounded-2xl shadow-xl border border-white z-30 w-40 sm:w-52">
-                  <p className="text-slate-400 text-[10px] uppercase tracking-wider font-semibold mb-1">Revenue</p>
-                  <p className="text-[#0F172A] text-2xl font-bold mb-3">$4820.00</p>
-                  {/* Chart Graphic */}
-                  <div className="flex items-end gap-1.5 h-10 w-full justify-between">
-                     <div className="w-full h-[40%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500"></div></div>
-                     <div className="w-full h-[70%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-75"></div></div>
-                     <div className="w-full h-[50%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-100"></div></div>
-                     <div className="w-full h-[100%] bg-[#ba1408] rounded-sm relative shadow-md"></div>
-                     <div className="w-full h-[60%] bg-[#ba1408]/20 rounded-sm relative group overflow-hidden"><div className="absolute bottom-0 w-full h-0 bg-[#ba1408] transition-all group-hover:h-full duration-500 delay-150"></div></div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="bg-[#ba1408]/10 p-2 rounded-lg">
+                        <TrendingUp size={20} className="text-[#ba1408]" />
+                    </div>
+                    <p className="text-slate-400 text-[10px] uppercase tracking-wider font-semibold">Avg. Client ROI</p>
+                  </div>
+                  <p className="text-[#0F172A] text-3xl font-bold mb-1">3.2x</p>
+                  <div className="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden mt-2">
+                    <div className="bg-[#ba1408] h-full w-[85%] rounded-full"></div>
                   </div>
                </div>
 

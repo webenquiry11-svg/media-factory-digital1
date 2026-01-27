@@ -1,13 +1,20 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, User, Mail, Phone, MessageSquare, Send } from 'lucide-react';
+import { X, User, Mail, Phone, MessageSquare, Send, Loader2, CheckCircle } from 'lucide-react';
 import { useModal } from './ModalContext';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const ContactModal = () => {
   const { isOpen, closeModal } = useModal();
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   // Animation Variants
   const backdropVariants = {
@@ -30,6 +37,41 @@ const ContactModal = () => {
     hidden: { opacity: 0, x: 20 },
     visible: { opacity: 1, x: 0 }
   };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ fullName: '', email: '', phone: '', message: '' });
+        setTimeout(() => {
+          closeModal();
+          setStatus('idle');
+        }, 2000); // Close modal after 2 seconds
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
+  };
+
 
   return (
     <AnimatePresence>
@@ -142,17 +184,21 @@ const ContactModal = () => {
                     <p className="text-gray-500">Fill out the form below and we'll get back to you.</p>
                   </div>
 
-                  <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); closeModal(); }}>
+                  <form className="space-y-4" onSubmit={handleSubmit}>
                     
                     {/* Full Name */}
                     <motion.div variants={formItemVariants} className="space-y-1">
                       <label className="text-sm font-semibold text-gray-700 ml-1">Full Name</label>
                       <div className="relative group">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#ba1408] transition-colors" size={18} />
-                        <input 
+                        <input
+                          name="fullName"
+                          value={formData.fullName}
+                          onChange={handleInputChange}
                           type="text" 
                           placeholder="John Doe"
                           className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#ba1408] focus:ring-4 focus:ring-[#ba1408]/10 outline-none transition-all font-medium text-gray-800 placeholder:text-gray-400"
+                          required
                         />
                       </div>
                     </motion.div>
@@ -162,10 +208,14 @@ const ContactModal = () => {
                       <label className="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
                       <div className="relative group">
                         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#ba1408] transition-colors" size={18} />
-                        <input 
+                        <input
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
                           type="email" 
                           placeholder="john@example.com"
                           className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#ba1408] focus:ring-4 focus:ring-[#ba1408]/10 outline-none transition-all font-medium text-gray-800 placeholder:text-gray-400"
+                          required
                         />
                       </div>
                     </motion.div>
@@ -175,7 +225,10 @@ const ContactModal = () => {
                       <label className="text-sm font-semibold text-gray-700 ml-1">Phone Number</label>
                       <div className="relative group">
                         <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#ba1408] transition-colors" size={18} />
-                        <input 
+                        <input
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
                           type="tel" 
                           placeholder="+1 (555) 000-0000"
                           className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#ba1408] focus:ring-4 focus:ring-[#ba1408]/10 outline-none transition-all font-medium text-gray-800 placeholder:text-gray-400"
@@ -188,23 +241,35 @@ const ContactModal = () => {
                       <label className="text-sm font-semibold text-gray-700 ml-1">Message</label>
                       <div className="relative group">
                         <MessageSquare className="absolute left-4 top-4 text-gray-400 group-focus-within:text-[#ba1408] transition-colors" size={18} />
-                        <textarea 
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
                           rows={3}
                           placeholder="Tell us about your project..."
                           className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#ba1408] focus:ring-4 focus:ring-[#ba1408]/10 outline-none transition-all font-medium text-gray-800 placeholder:text-gray-400 resize-none"
+                          required
                         />
                       </div>
                     </motion.div>
 
                     <motion.button
+                      type="submit"
+                      disabled={status === 'loading' || status === 'success'}
                       variants={formItemVariants}
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-[#ba1408] hover:bg-[#991106] text-white font-bold py-4 rounded-xl shadow-lg shadow-red-900/20 transition-all flex items-center justify-center gap-2 mt-2 group"
+                      className="w-full bg-[#ba1408] hover:bg-[#991106] text-white font-bold py-4 rounded-xl shadow-lg shadow-red-900/20 transition-all flex items-center justify-center gap-2 mt-2 group disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
-                      <span>Send Message</span>
-                      <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                      {status === 'loading' && <Loader2 size={18} className="animate-spin" />}
+                      {status === 'idle' && <><span>Send Message</span><Send size={18} className="group-hover:translate-x-1 transition-transform" /></>}
+                      {status === 'success' && <><span>Message Sent!</span><CheckCircle size={18} /></>}
+                      {status === 'error' && <span>Something went wrong</span>}
                     </motion.button>
+
+                    {status === 'error' && (
+                      <p className="text-center text-sm text-red-500">Failed to send message. Please try again.</p>
+                    )}
 
                   </form>
                 </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { BarChart3, ChevronDown, MoreHorizontal } from 'lucide-react';
+import { CheckCircle, FileText, TrendingUp } from 'lucide-react';
 
 const Page = () => {
   return (
@@ -77,30 +77,24 @@ const Page = () => {
           {/* Floating Card 1: Balance (Top Right) */}
           <div className="absolute -top-6 -right-0 sm:-right-4 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
             <div className="bg-gray-50 p-2 rounded-full">
-              <div className="w-6 h-6 rounded-full bg-red-500 overflow-hidden relative">
-                 {/* CSS Flag Simulation */}
-                 <div className="absolute top-0 left-0 w-3 h-3 bg-[#ba1408] z-10"></div>
-                 <div className="w-full h-1 bg-white mt-1"></div>
-                 <div className="w-full h-1 bg-white mt-1"></div>
-              </div>
+              <CheckCircle className="w-6 h-6 text-[#ba1408]" />
             </div>
             <div>
-              <p className="text-xs text-gray-500">Your balance</p>
-              <p className="text-xl font-bold text-gray-900">$1,000</p>
+              <p className="text-xs text-gray-500">Success Rate</p>
+              <p className="text-xl font-bold text-gray-900">95%</p>
             </div>
-            <ChevronDown className="w-4 h-4 text-gray-400 ml-2" />
           </div>
 
           {/* Floating Card 2: Usability Testing (Bottom Left) */}
           <div className="absolute bottom-8 -left-2 sm:-left-8 bg-white p-5 rounded-2xl shadow-xl w-48 z-20">
             <div className="flex justify-between items-start mb-4">
               <div className="bg-[#ba1408]/10 p-1.5 rounded-lg">
-                <BarChart3 className="w-5 h-5 text-red-700" />
+                <FileText className="w-5 h-5 text-red-700" />
               </div>
-              <MoreHorizontal className="w-4 h-4 text-gray-400" />
+              <div className="bg-green-50 px-2 py-0.5 rounded text-[10px] font-bold text-green-600">Verified</div>
             </div>
-            <h4 className="font-bold text-gray-900 text-sm">Usability testing</h4>
-            <p className="text-xs text-gray-500 mb-4">12 products</p>
+            <h4 className="font-bold text-gray-900 text-2xl">150+</h4>
+            <p className="text-xs text-gray-500 mb-4">Case Studies</p>
             
             {/* Custom Bar Chart CSS */}
             <div className="flex items-end justify-between h-12 gap-1">
@@ -115,20 +109,14 @@ const Page = () => {
 
           {/* Floating Card 3: Pie Chart (Bottom Right) */}
           <div className="absolute -bottom-6 right-2 sm:right-8 bg-white p-4 rounded-2xl shadow-xl z-20 w-40">
-            <p className="text-xs font-semibold text-gray-800 mb-2">Your Pie Chart</p>
+            <p className="text-xs font-semibold text-gray-800 mb-2">Monthly Growth</p>
             <div className="flex items-center gap-4">
-              {/* CSS Pie Chart */}
-              <div className="w-12 h-12 rounded-full border-4 border-[#ba1408]/10 relative bg-white">
-                <div 
-                  className="absolute inset-0 rounded-full border-4 border-red-700 border-r-transparent border-b-transparent transform rotate-45"
-                ></div>
+              <div className="bg-red-50 p-2 rounded-full">
+                <TrendingUp className="w-6 h-6 text-[#ba1408]" />
               </div>
               <div>
-                 <p className="text-xs text-gray-400">Monthly</p>
-                 <div className="flex gap-2 text-[10px] mt-1 font-bold">
-                    <span>63%</span>
-                    <span className="text-gray-400">25%</span>
-                 </div>
+                 <p className="text-xl font-bold text-gray-900">63%</p>
+                 <p className="text-[10px] text-green-600 font-bold">↑ Trending</p>
               </div>
             </div>
           </div>
