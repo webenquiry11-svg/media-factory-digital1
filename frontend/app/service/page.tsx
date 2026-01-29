@@ -76,7 +76,7 @@ const RevenueSection = () => {
           {/* 1. IT Management (Top Left) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#FFF5F7] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="bg-sky-50 rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
@@ -84,7 +84,7 @@ const RevenueSection = () => {
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 cursor-pointer">
-                <ArrowUpRight className="text-[#E11D48]" size={24} />
+                <ArrowUpRight className="text-sky-600" size={24} />
               </button>
             </div>
 
@@ -96,19 +96,19 @@ const RevenueSection = () => {
                 preserveAspectRatio="none"
               >
                 <defs>
-                  <linearGradient id="pinkGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#FB7185" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#FFF5F7" stopOpacity="0" />
+                  <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#F0F9FF" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <path
                   d="M0 180 L 80 160 L 160 180 L 240 100 L 320 120 L 400 20 L 400 220 L 0 220 Z"
-                  fill="url(#pinkGradient)"
+                  fill="url(#skyGradient)"
                 />
                 <path
                   d="M0 180 L 80 160 L 160 180 L 240 100 L 320 120 L 400 20"
                   fill="none"
-                  stroke="#E11D48"
+                  stroke="#0284C7"
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -118,7 +118,7 @@ const RevenueSection = () => {
                   cy="160"
                   r="4"
                   fill="white"
-                  stroke="#E11D48"
+                  stroke="#0284C7"
                   strokeWidth="2"
                 />
                 <circle
@@ -126,7 +126,7 @@ const RevenueSection = () => {
                   cy="100"
                   r="4"
                   fill="white"
-                  stroke="#E11D48"
+                  stroke="#0284C7"
                   strokeWidth="2"
                 />
                 <circle
@@ -134,7 +134,7 @@ const RevenueSection = () => {
                   cy="120"
                   r="4"
                   fill="white"
-                  stroke="#E11D48"
+                  stroke="#0284C7"
                   strokeWidth="2"
                 />
               </svg>
@@ -302,7 +302,7 @@ const RevenueSection = () => {
           {/* 5. Cloud Solutions (Bottom Right) */}
           <motion.div
             variants={cardVariants}
-            className="bg-[#FAF5FF] rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
+            className="bg-sky-50 rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-10 flex flex-col justify-between min-h-[400px] lg:h-[520px] relative overflow-hidden group hover:shadow-xl transition-all duration-300"
           >
             <div className="relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-[#0F172A] leading-tight mb-6 lg:mb-8">
@@ -310,7 +310,7 @@ const RevenueSection = () => {
               </h3>
 
               <button className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 cursor-pointer">
-                <ArrowUpRight className="text-[#9333EA]" size={24} />
+                <ArrowUpRight className="text-sky-600" size={24} />
               </button>
             </div>
 
@@ -318,9 +318,9 @@ const RevenueSection = () => {
             <div className="absolute bottom-0 left-0 w-full h-[220px] flex items-end justify-center">
               <div className="relative w-full h-full">
                 {/* Abstract Cloud Shapes */}
-                <div className="absolute bottom-[-20px] left-[-20px] w-48 h-48 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                <div className="absolute bottom-[-20px] right-[-20px] w-48 h-48 bg-[#ba1408]/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-[40px] left-[20%] w-48 h-48 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                <div className="absolute bottom-[-20px] left-[-20px] w-48 h-48 bg-sky-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div className="absolute bottom-[-20px] right-[-20px] w-48 h-48 bg-sky-400/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-[40px] left-[20%] w-48 h-48 bg-sky-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
                   <div className="w-32 h-32">

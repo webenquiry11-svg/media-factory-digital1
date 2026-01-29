@@ -10,10 +10,14 @@ const WorkShowcaseSection = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 5000,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1500, // Large screens

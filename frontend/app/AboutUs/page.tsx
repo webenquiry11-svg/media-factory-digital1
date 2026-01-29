@@ -94,14 +94,6 @@ const AboutSection = () => {
                                     className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                                 />
                                 
-                                {/* Orange Curved Arrow Overlay */}
-                                <div className="absolute top-6 right-6 z-20">
-                                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" className="text-orange-400 rotate-12 drop-shadow-md opacity-90">
-                                        <path d="M20 80 Q 60 10 90 40" stroke="currentColor" strokeWidth="6" strokeLinecap="round" fill="none" />
-                                        <path d="M70 30 L 90 40 L 85 60" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                                    </svg>
-                                </div>
-
                                 {/* Floating Satisfaction Badge */}
                                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-slate-800 p-2.5 px-4 rounded-xl shadow-lg flex items-center gap-3 w-[90%] animate-in slide-in-from-bottom-4 duration-700">
                                     <div className="bg-gray-100 p-2 rounded-full shrink-0">

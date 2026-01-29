@@ -1,9 +1,34 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { CheckCircle, FileText, TrendingUp } from 'lucide-react';
 
 const Page = () => {
+  const [activeTab, setActiveTab] = useState(1);
+
+  const tabs = [
+    {
+      id: 0,
+      title: "Custom Strategies",
+      desc: "Bespoke plans crafted to align perfectly with your brand's vision and growth targets."
+    },
+    {
+      id: 1,
+      title: "Advanced Technology",
+      desc: "Leading-edge AR/VR/XR, SEO, and web tools delivering unmatched performance and results."
+    },
+    {
+      id: 2,
+      title: "Insights & Research",
+      desc: "Deep market analysis uncovering opportunities to outpace your competition."
+    },
+    {
+      id: 3,
+      title: "Usability Testing",
+      desc: "Rigorous checks ensuring seamless experiences that convert visitors into loyal customers."
+    }
+  ];
+
   return (
     <div id="stats" className="min-h-screen bg-gray-50 flex items-center justify-center p-4 lg:p-12 font-sans">
       
@@ -31,31 +56,24 @@ const Page = () => {
 
           {/* Interactive List / Tabs */}
           <div className="space-y-4 pt-4">
-            {/* Item 1 */}
-            <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              <h4 className="font-bold text-gray-900 mb-1">Custom Strategies</h4>
-              <p className="text-sm text-gray-500">Bespoke plans crafted to align perfectly with your brand's vision and growth targets.</p>
-            </div>
-
-            {/* Item 2 (Active State) */}
-            <div className="bg-white rounded-xl shadow-xl shadow-gray-200/50 p-6 border-l-4 border-red-700 transform scale-105 transition-transform">
-              <h3 className="text-[#ba1408] font-bold text-lg mb-2">Advanced Technology</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Leading-edge AR/VR/XR, SEO, and web tools delivering unmatched performance and results.
-              </p>
-            </div>
-
-            {/* Item 3 */}
-            <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              <h4 className="font-bold text-gray-900 mb-1">Insights & Research</h4>
-              <p className="text-sm text-gray-500">Deep market analysis uncovering opportunities to outpace your competition.</p>
-            </div>
-
-            {/* Item 4 */}
-            <div className="text-gray-600 font-medium text-lg px-6 py-3 cursor-pointer hover:text-gray-900 transition-colors">
-              <h4 className="font-bold text-gray-900 mb-1">Usability Testing</h4>
-              <p className="text-sm text-gray-500">Rigorous checks ensuring seamless experiences that convert visitors into loyal customers.</p>
-            </div>
+            {tabs.map((tab) => (
+              <div 
+                key={tab.id}
+                onMouseEnter={() => setActiveTab(tab.id)}
+                className={`cursor-pointer transition-all duration-300 ${
+                  activeTab === tab.id 
+                    ? "bg-white rounded-xl shadow-xl shadow-gray-200/50 p-6 border-l-4 border-red-700 transform scale-105"
+                    : "px-6 py-3 hover:bg-gray-100 rounded-xl"
+                }`}
+              >
+                <h4 className={`font-bold text-lg mb-1 ${activeTab === tab.id ? "text-[#ba1408]" : "text-gray-900"}`}>
+                  {tab.title}
+                </h4>
+                <p className={`text-sm ${activeTab === tab.id ? "text-gray-500 leading-relaxed" : "text-gray-500"}`}>
+                  {tab.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 

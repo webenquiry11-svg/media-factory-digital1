@@ -1,10 +1,12 @@
 'use client'; // <--- ADD THIS LINE HERE
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 // --- SVGs for the Brand Logos (Unchanged) ---
 
 const WhyChooseSection = () => {
+  const [activeCard, setActiveCard] = useState(1);
+
   return (
     <div id="why-choose-us" className="bg-white min-h-screen flex items-center justify-center p-6 lg:p-16 font-sans">
       
@@ -55,14 +57,28 @@ const WhyChooseSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div 
+              onMouseEnter={() => setActiveCard(0)}
+              className={`p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
+                activeCard === 0 
+                  ? "bg-white border-[#ba1408] shadow-md transform scale-105" 
+                  : "bg-white border-gray-100 shadow-sm hover:shadow-md"
+              }`}
+            >
                 <h4 className="font-bold text-lg text-gray-900 mb-3">Results-Driven Creativity</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
                     Bold campaigns that deliver measurable ROI through SEO, immersive tech, and stunning web experiences.
                 </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-[#ba1408] shadow-sm">
+            <div 
+              onMouseEnter={() => setActiveCard(1)}
+              className={`p-8 rounded-2xl border transition-all duration-300 cursor-pointer ${
+                activeCard === 1 
+                  ? "bg-white border-[#ba1408] shadow-md transform scale-105" 
+                  : "bg-white border-gray-100 shadow-sm hover:shadow-md"
+              }`}
+            >
                 <h4 className="font-bold text-lg text-gray-900 mb-3">Seamless Partnership</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
                     Dedicated support from strategy to launch, ensuring your vision scales effortlessly with expert guidance.
