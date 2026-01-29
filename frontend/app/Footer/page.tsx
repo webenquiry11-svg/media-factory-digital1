@@ -113,26 +113,26 @@ const Footer = () => {
 
             {/* Column 2: My Account */}
             <div className="lg:pl-8">
-              <h3 className="text-lg font-medium text-white mb-6">My account</h3>
+              <h3 className="text-lg font-medium text-white mb-6">Quick Links</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-red-700 transition-colors">Forum Support</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Help & FAQ</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Pricing and plans</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Cookies Policy</a></li>
+                <li><a href="#about" className="hover:text-red-700 transition-colors">About Us</a></li>
+                <li><a href="#portfolio" className="hover:text-red-700 transition-colors">Portfolio</a></li>
+                <li><a href="#contact" className="hover:text-red-700 transition-colors">Contact Us</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Terms & Conditions</a></li>
               </ul>
             </div>
 
             {/* Column 3: Service */}
             <div>
-              <h3 className="text-lg font-medium text-white mb-6">Service</h3>
+              <h3 className="text-lg font-medium text-white mb-6">Services</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-red-700 transition-colors">It Consultation</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Cloud Services</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">AI Machine Learning</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Data Security</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Software Development</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Cyber Security</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Digital Marketing</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">SEO Optimization</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Graphic Designing</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">UI/UX Designing</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Website Development</a></li>
+                <li><a href="#" className="hover:text-red-700 transition-colors">Game Development</a></li>
               </ul>
             </div>
 
