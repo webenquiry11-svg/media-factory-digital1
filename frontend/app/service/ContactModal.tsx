@@ -158,6 +158,61 @@ const ContactModal = () => {
                         loop
                         autoplay
                       />
+                      
+                      {/* Orbiting Icons */}
+                      <motion.div 
+                        className="absolute inset-0"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      >
+                        <motion.div 
+                          className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/fluency/48/adobe-illustrator.png" alt="Logo Design" className="w-8 h-8" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute top-4 -right-2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/color/48/figma--v1.png" alt="UI/UX" className="w-8 h-8" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute bottom-4 -right-2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/color/48/visual-studio-code-2019.png" alt="VS Code" className="w-8 h-8" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/fluency/48/unity.png" alt="Game Dev" className="w-8 h-8" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute bottom-4 -left-2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/fluency/48/bullish.png" alt="SEO" className="w-8 h-8" />
+                        </motion.div>
+
+                        <motion.div 
+                          className="absolute top-4 -left-2 bg-white/10 p-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg"
+                          animate={{ rotate: -360 }}
+                          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        >
+                           <img src="https://img.icons8.com/color/48/google-ads.png" alt="Marketing" className="w-8 h-8" />
+                        </motion.div>
+                      </motion.div>
                    </div>
                 </div>
 
