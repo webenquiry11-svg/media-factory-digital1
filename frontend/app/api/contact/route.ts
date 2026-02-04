@@ -1,34 +1,58 @@
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
-// This function handles POST requests to /api/contact
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { fullName, email, phone, message } = body;
 
-    // --- Basic Validation ---
+    // Basic Validation
     if (!fullName || !email || !message) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // --- Here is where you would process the data ---
-    // For example, send an email using a service like Resend, Nodemailer, or SendGrid.
-    
-    // For demonstration, we'll just log it to the console.
-    console.log('--- New Contact Form Submission ---');
-    console.log('Full Name:', fullName);
-    console.log('Email:', email);
-    console.log('Phone:', phone || 'Not provided');
-    console.log('Message:', message);
-    console.log('------------------------------------');
+    // Create a transporter using Gmail
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'mediafactorydigital.in@gmail.com',
+        pass: 'vexq kavo boty jpyo', // App Password provided
+      },
+    });
 
-    // You can add your email sending logic here.
-    // await sendEmail({ fullName, email, phone, message });
+    // Email content configuration
+    const mailOptions = {
+      from: '"Media Factory Website" <mediafactorydigital.in@gmail.com>', // Sender address
+      to: 'info@mediafactory.in', // Receiver address
+      replyTo: email, // Allows you to reply directly to the user's email
+      subject: `New Contact Request from ${fullName}`,
+      text: `
+        You have received a new message from the website contact form.
+        
+        Name: ${fullName}
+        Email: ${email}
+        Phone: ${phone || 'Not provided'}
+        
+        Message:
+        ${message}
+      `,
+      html: `
+        <h3>New Contact Request</h3>
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <br/>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
+    };
 
-    return NextResponse.json({ message: 'Message sent successfully!' }, { status: 200 });
+    // Send the email
+    await transporter.sendMail(mailOptions);
 
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
   } catch (error) {
-    console.error('API Error:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    console.error('Error sending email:', error);
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
 }
