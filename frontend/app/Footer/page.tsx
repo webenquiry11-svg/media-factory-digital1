@@ -107,7 +107,7 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-500 text-xs">
-                By subscribing, you're accept <a href="#" className="text-white underline decoration-gray-600 underline-offset-2">Privacy Policy</a>
+                By subscribing, you're accept <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-gray-600 underline-offset-2">Privacy Policy</a>
               </p>
             </div>
 
@@ -118,7 +118,7 @@ const Footer = () => {
                 <li><a href="#about" className="hover:text-red-700 transition-colors">About Us</a></li>
                 <li><a href="#portfolio" className="hover:text-red-700 transition-colors">Portfolio</a></li>
                 <li><a href="#contact" className="hover:text-red-700 transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-red-700 transition-colors">Privacy Policy</a></li>
+                <li><a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-red-700 transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-red-700 transition-colors">Terms & Conditions</a></li>
               </ul>
             </div>
